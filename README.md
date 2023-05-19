@@ -53,9 +53,13 @@ In each directory, there is a README.md and an OWNERS, which explains what the d
 <details>
   <summary>Work with actions</summary>
 
+Actions provide handling of PR and issue.
+We used the bot @kubbot, It can detect issues in Chinese and translate them to English, and you can interact with it using the command `/comment`.
+
+Comment in an issue:
 
 ```bash
-
+❯ /intive
 ```
 
 </details>
