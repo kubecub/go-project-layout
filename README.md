@@ -120,6 +120,80 @@ B -->|4. Updates view| A
 
 ## 🤖 File Directory Description
 
+Catalog standardization design structure:
+
+```bash
+.go-project-layout
+├── CONTRIBUTING.md          # Contribution guidelines
+├── LICENSE                  # License information
+├── Makefile                 # Makefile for building and running the project
+├── README.md                # Project overview in English
+├── README_zh-CN.md          # Project overview in Chinese
+├── api                      # API-related files
+│   ├── OWNERS               # API owners
+│   └── README.md            # API documentation
+├── assets                   # Static assets, such as images and stylesheets
+│   └── README.md            # Assets documentation
+├── build                    # Build-related files
+│   ├── OWNERS               # Build owners
+│   └── README.md            # Build documentation
+├── cmd                      # Command-line tools and entry points
+│   ├── OWNERS               # Command owners
+│   └── README.md            # Command documentation
+├── configs                  # Configuration files
+│   ├── OWNERS               # Configuration owners
+│   ├── README.md            # Configuration documentation
+│   └── config.yaml          # Main configuration file
+├── deploy                   # Deployment-related files
+│   ├── OWNERS               # Deployment owners
+│   └── README.md            # Deployment documentation
+├── docs                     # Project documentation
+│   ├── OWNERS               # Documentation owners
+│   └── README.md            # Documentation index
+├── examples                 # Example code and usage
+│   ├── OWNERS               # Example owners
+│   └── README.md            # Example documentation
+├── init                     # Initialization files
+│   ├── OWNERS               # Initialization owners
+│   └── README.md            # Initialization documentation
+├── internal                 # Internal application code
+│   ├── OWNERS               # Internal code owners
+│   ├── README.md            # Internal code documentation
+│   ├── app                  # Application logic
+│   ├── controllers          # Controllers for handling requests
+│   ├── model                # Data models and database interactions
+│   ├── pkg                  # Internal packages
+│   ├── service              # Services for business logic
+│   ├── utils                # Utility functions and helpers
+│   └── views                # View templates and rendering
+├── pkg                      # Public packages and libraries
+│   ├── OWNERS               # Package owners
+│   ├── README.md            # Package documentation
+│   ├── common               # Common utilities and helpers
+│   ├── feishu               # Feishu integration
+│   ├── http                 # HTTP-related utilities
+│   ├── logging              # Logging utilities
+│   ├── tools                # Tooling and scripts
+│   ├── utils                # General utility functions
+│   └── version              # Version information
+├── scripts                  # Scripts for development and automation
+│   ├── LICENSE_TEMPLATES    # License templates
+│   ├── OWNERS               # Script owners
+│   ├── README.md            # Script documentation
+│   ├── githooks             # Git hooks for development
+│   └── make-rules           # Makefile rules and scripts
+├── test                     # Test files and test-related utilities
+│   ├── OWNERS               # Test owners
+│   └── README.md            # Test documentation
+├── third_party              # Third-party dependencies and libraries
+│   └── README.md            # Third-party documentation
+├── tools                    # Tooling and utilities for development
+│   └── README.md            # Tool documentation
+└── web                      # Web-related files, such as HTML and CSS
+    ├── OWNERS               # Web owners
+    └── README.md            # Web documentation
+```
+
 ## 🗓️ community meeting
 
 We welcome everyone to join us and contribute to go-project-layout, whether you are new to open source or professional. We are committed to promoting an open source culture, so we offer community members neighborhood prizes and reward money in recognition of their contributions. We believe that by working together, we can build a strong community and make valuable open source tools and resources available to more people. So if you are interested in go-project-layout, please join our community and start contributing your ideas and skills!
