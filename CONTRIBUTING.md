@@ -16,23 +16,19 @@ This document provides guidelines and best practices to help you contribute effe
 - [Release version](#Release-version)
 - [Contact Us](#Contact-Us)
 
-
-
 ## What we expect of you
 
 We hope that anyone can join go-project-layout , even if you are a student, writer, translator
 
 Please meet the minimum version of the Go language published in [go.mod](./go.mod). If you want to manage the Go language version, we provide tools to install [gvm](https://github.com/moovweb/gvm) in our [Makefile](./Makefile)
 
-You'd better use Linux as the development environment, Linux with [Makefile](./Makefile) can help you quickly build and test go-project-layout project.
+You'd better use Linux OR WSL as the development environment, Linux with [Makefile](./Makefile) can help you quickly build and test go-project-layout project.
 
 If you are familiar with [Makefile](./Makefile) , you can easily see the clever design of the go-project-layout Makefile. Storing the necessary tools such as golangci in the `/tools` directory can avoid some tool version issues.
 
 The [Makefile](./Makefile) is for every developer, even if you don't know how to use the Makefile tool, don't worry, we provide two great commands to get you up to speed with the Makefile architecture, `make help` and `make help-all`, it can reduce problems of the developing environment.
 
-
-
-## Code of Conduct
+## Code of ConductCode of Conduct
 
 #### Code and doc contribution
 
@@ -51,59 +47,37 @@ Every action to make project go-project-layout better is encouraged. On GitHub, 
 
 #### Where should I start?
 
-Getting good at GitHub is the first step, we have a [list of labes](https://github.com/kubecub/go-project-layout/labels) and reading some of the [common tags](https://github.com/kubecub/go-project-layout/labels?sort=count-desc) helps us get involved in the community quickly.GitHub allows you to filter out types of issues and pull requests,  which helps you discover items in need of triaging. This table includes some predetermined searches for convenience:
-
-| Search                                                       | What it sorts                                           |
-| ------------------------------------------------------------ | ------------------------------------------------------- |
-| [created-asc](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-asc) | Untriaged issues by age                                 |
-| [needs-triage](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+no%3Alabel) | Issues that need to be assigned to a Labels             |
-| [`is:open is:issue`](https://github.com/kubecub/go-project-layout/issues?q=is%3Aopen+is%3Aissue+sort%3Aupdated-desc) | Newest incoming issues                                  |
-| [comments-desc](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+is%3Aopen+sort%3Acomments-desc) | Busiest untriaged issues, sorted by # of comments       |
-| [comments-asc](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+is%3Aopen+sort%3Acomments-asc) | Issues that need more attention, based on # of comments |
-
-We suggest preparing your triage by filtering out the oldest, unlabelled issues and pull requests first.
-
-1. If you are new to the project, don't know how to contribute go-project-layout, please check out the [good first issue](https://github.com/kubecub/go-project-layout/issues?q=is%3Aopen+label%3A"good+first+issue"+sort%3Aupdated-desc) label and  [help wanted](https://github.com/kubecub/go-project-layout/issues?q=is%3Aopen+is%3Aissue+label%3A"help+wanted"+sort%3Aupdated-desc).
-2. You should be good at filtering the go-project-layout issue tags and finding the ones you like, such as [RFC](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+is%3Aopen+RFC+label%3ARFC) for big initiatives, features for [feature](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+label%3Akind%2Ffeature+sort%3Aupdated-desc+) proposals, and [bug](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+label%3Akind%2Fbug+sort%3Aupdated-desc+) fixes.
-3. If you are looking for something to work on, check out our [open issues](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc).
-4. If you have an idea for a new feature, please [open an issue](https://github.com/kubecub/go-project-layout/issues/new/choose), and we can discuss it.
-
-> **Note**
-> Reply to `/assign` or `/assign @yourself` with a question you wish to resolve, and we'll assign the question to you and your name will be listed under `Assignees`
-
-
++ If you are new to the project, don't know how to contribute go-project-layout, please check out the [good first issue](https://github.com/kubecub/go-project-layout/issues?q=is%3Aopen+label%3A"good+first+issue"+sort%3Aupdated-desc) label.
++ You should be good at filtering the go-project-layout issue tags and finding the ones you like, such as [RFC](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+is%3Aopen+RFC+label%3ARFC) for big initiatives, features for [feature](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+label%3Afeature) proposals, and [bug](https://github.com/{github/issues?q=is%3Aissue+label%3Abug+) fixes.
++ If you are looking for something to work on, check out our [open issues](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc).
++ If you have an idea for a new feature, please [open an issue](https://github.com/kubecub/go-project-layout/issues/new/choose), and we can discuss it.
 
 #### Design documents
 
-For any substantial design, there should be a well-crafted design document. This document is not just a simple record, but also a detailed description and manifestation, which can help team members better understand the design thinking and grasp the design direction. In the process of writing the design document, we can choose to use tools such as `Google Docs` or `Notion`, and even mark **RFC** in [issues](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+is%3Aopen+RFC+label%3ARFC) or [discussions](https://github.com/kubecub/go-project-layout/discussions) for better collaboration. Of course, after completing the design document, we should also add it to our [Shared Drive](https://drive.google.com/drive/) and notify the appropriate working group to let everyone know of its existence. Only by doing so can we maximize the effectiveness of the design document and provide strong support for the smooth progress of the project.
+For any substantial design, there should be a well-crafted design document. This document is not just a simple record, but also a detailed description and manifestation, which can help team members better understand the design thinking and grasp the design direction. In the process of writing the design document, we can choose to use tools such as `Google Docs` or `Notion`, and even mark RFC in [issues](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+is%3Aopen+RFC+label%3ARFC) or [discussions](https://github.com/kubecub/go-project-layout/discussions) for better collaboration. Of course, after completing the design document, we should also add it to our [Shared Drive](https://drive.google.com/drive/) and notify the appropriate working group to let everyone know of its existence. Only by doing so can we maximize the effectiveness of the design document and provide strong support for the smooth progress of the project.
 
 Anybody can access the shared Drive for reading. To get access to comment. Once you've done that, head to the [shared Drive](https://drive.google.com/) and behold all the docs.
 
-In addition to that, we'd love to invite you to [Join Our Slack](https://join.slack.com/t/kubecub/shared_invite/zt-1se0k2bae-lkYzz0_T~BYh3rjkvlcUqQ) where you can play with your imagination, tell us what you're working on, and get a quick response.
+In addition to that, we'd love to invite you to [join our Slack](https://join.slack.com/t/c-ub/shared_invite/zt-1se0k2bae-lkYzz0_T~BYh3rjkvlcUqQ) where you can play with your imagination, tell us what you're working on, and get a quick response.
 
 When documenting a new design, we recommend a 2-step approach:
 
-1. Use the short-form **RFC** template to outline your ideas and get early feedback.
-2. Once you have received sufficient feedback and consensus, you may use the **longer-form design doc template** to specify and discuss your design in more details.
+1. Use the short-form RFC template to outline your ideas and get early feedback.
+2. Once you have received sufficient feedback and consensus, you may use the longer-form design doc template to specify and discuss your design in more details.
 
-**In order to contribute a feature to go-project-layout you'll need to go through the following steps:**
+In order to contribute a feature to go-project-layout you'll need to go through the following steps:
 
-+ Discuss your idea with the appropriate [working groups](https://join.slack.com/t/kubecub/shared_invite/zt-1se0k2bae-lkYzz0_T~BYh3rjkvlcUqQ) on the working group's Slack channel.
++ Discuss your idea with the appropriate [working groups](https://join.slack.com/t/c-ub/shared_invite/zt-1se0k2bae-lkYzz0_T~BYh3rjkvlcUqQ) on the working group's Slack channel.
 + Once there is general agreement that the feature is useful, create a GitHub issue to track the discussion. The issue should include information about the requirements and use cases that it is trying to address.
 + Include a discussion of the proposed design and technical details of the implementation in the issue.
 
-But keep in mind that there is no guarantee of it being accepted and so it is usually best to get agreement on the **idea/design** before time is spent coding it. However, sometimes seeing the exact code change can help focus discussions, so the choice is up to you.
-
-
+But keep in mind that there is no guarantee of it being accepted and so it is usually best to get agreement on the idea/design before time is spent coding it. However, sometimes seeing the exact code change can help focus discussions, so the choice is up to you.
 
 ## Getting Started
 
-> **Note**
->
-> A simple example allows you to quickly contribute your first **PR** to go-project-layout.
-> To propose PR for the go-project-layout item, we assume you have registered a GitHub ID. Then you could finish the preparation in the following steps:
+To propose PR for the go-project-layout item, we assume you have registered a GitHub ID. Then you could finish the preparation in the following steps:
 
-1. **Fork** the repository(go-project-layout)
+1. Fork the repository(go-project-layout)
 
 2. **CLONE** your own repository to master locally. Use `git clone https://github.com/<your-username>/go-project-layout.git` to clone repository to your local machine. Then you can create new branches to finish the change you wish to make.
 
@@ -114,9 +88,9 @@ But keep in mind that there is no guarantee of it being accepted and so it is us
    ❯ git remote set-url --push upstream no-pushing
    ```
 
-   With this remote setting, you can check your **git remote configuration** like this:
+   With this remote setting, you can check your git remote configuration like this:
 
-   ```go
+   ```bash
    ❯ git remote -v
    origin     https://github.com/<your-username>/go-project-layout.git (fetch)
    origin     https://github.com/<your-username>/go-project-layout.git (push)
@@ -126,7 +100,7 @@ But keep in mind that there is no guarantee of it being accepted and so it is us
 
    Adding this, we can easily synchronize local branches with upstream branches.
 
-4. Create a new branch for your changes (use a descriptive name, such as `fix/bug-123` or `feature/add-new-xxx` and `release/xxx`).
+4. Create a new branch for your changes (use a descriptive name, such as `fix-bug-123` or `add-new-feature`).
 
    ```bash
    ❯ cd go-project-layout
@@ -134,36 +108,31 @@ But keep in mind that there is no guarantee of it being accepted and so it is us
    ❯ git checkout upstream/main
    ```
 
-   > **Note** 
-   >
-   > Please don't use `git pull` instead of the above `fetch` and `rebase`. Since `git pull` executes a merge, it creates merge commits. These make the commit history messy and violate the principle that commits ought to be individually understandable and useful.
-   >
-   > You might also consider changing your `.git/config` file via `git config branch.autoSetupRebase always` to change the behavior of `git pull`, or another non-merge option such as `git pull --rebase`.
-
    Create a new branch: 
 
    ```bash
    ❯ git checkout -b <new-branch>
    ```
 
-   Make any change on the `new-branch` then use [Makefile](./Makefile) **build** and **test** your codes.
+   Make any change on the `new-branch` then use [Makefile](./Makefile) build and test your codes.
 
 5. **Commit your changes** to your local branch, lint before committing and commit with sign-off
 
    ```bash
    ❯ git rebase upstream/main
-   ❯ make lint	  # golangci-lint run -c .golangci.yml
+   ❯ make link	  # golangci-lint run -c .golangci.yml
    ❯ git add -A  # add changes to staging
-   ❯ git commit -a -s -m "fix: message for your changes" # -s adds a Signed-off-by trailer
+   ❯ git commit -a -s -m "message for your changes" # -s adds a Signed-off-by trailer
    ```
 
-6. **Push your branch** to your forked repository, it is recommended to have only one commit for a **PR**.
+6. **Push your branch**  to your forked repository, it is recommended to have only one commit for a PR.
 
    ```bash
    # sync up with upstream
-   ❯ git fetch upstream
+   ❯ git fetch upstream main
    ❯ git rebase upstream/main
-   ❯ git rebase -i	<commit-id> # rebase with interactive mode to `squash` your commits into a single one
+   ❯ 
+   ❯ git rebase -i	<commit-id> # rebase with interactive mode to squash your commits into a single one
    ❯ git push # push to the remote repository, if it's a first time push, run git push --set-upstream origin <new-branch>
    ```
 
@@ -190,8 +159,6 @@ But keep in mind that there is no guarantee of it being accepted and so it is us
 
    It is recommended to review your changes before filing a pull request. Check if your code doesn't conflict with the main branch and no redundant code is included.
 
-
-
 ## Style and Specification
 
 We divide the problem into security and general problems:
@@ -200,7 +167,7 @@ We divide the problem into security and general problems:
 
 Security issues are always treated seriously. As our usual principle, we discourage anyone to spread security issues. If you find a security issue of go-project-layout, please do not discuss it in public and even do not open a public issue.
 
-Instead we encourage you to send us a private email to [Gmail]([3293172751nss@gmail.com](mailto:3293172751nss@gmail.com)) to report this.
+Instead we encourage you to send us a private email to [3293172751nss@gmail.com](mailto:3293172751nss@gmail.com) to report this.
 
 #### Reporting general issues
 
@@ -208,7 +175,7 @@ To be honest, we regard every user of go-project-layoutas a very kind contributo
 
 Since we collaborate project go-project-layout in a distributed way, we appreciate **WELL-WRITTEN**, **DETAILED**, **EXPLICIT** issue reports. To make the communication more efficient, we wish everyone could search if your issue is an existing one in the searching list. If you find it existing, please add your details in comments under the existing issue instead of opening a brand new one.
 
-To make the issue details as standard as possible, we setup an [ISSUE TEMPLATE](https://github.com/kubecub/.github/tree/main/.github/ISSUE_TEMPLATE) for issue reporters. You can find three kinds of issue templates there: question, bug report and feature request. Please **BE SURE** to follow the instructions to fill fields in template.
+To make the issue details as standard as possible, we setup an [ISSUE TEMPLATE](https://github.com/kubecub/go-project-layout/tree/main/.github/ISSUE_TEMPLATE) for issue reporters. You can find three kinds of issue templates there: question, bug report and feature request. Please **BE SURE** to follow the instructions to fill fields in template.
 
 **There are a lot of cases when you could open an issue:**
 
@@ -225,9 +192,6 @@ To make the issue details as standard as possible, we setup an [ISSUE TEMPLATE](
 
 Also, we must be reminded when submitting a new question about go-project-layout, please remember to remove the sensitive data from your post. Sensitive data could be password, secret key, network locations, private business data and so on.
 
-> **Note**
-> We have requirements for **Commits**,  **PR**,  **Docs**, and good standards help us collaborate better and understand what you're doing.
-
 #### Commit Rules
 
 Actually in go-project-layout, we take two rules serious when committing:
@@ -236,7 +200,7 @@ Actually in go-project-layout, we take two rules serious when committing:
 
 Commit message could help reviewers better understand what the purpose of submitted PR is. It could help accelerate the code review procedure as well. We encourage contributors to use **EXPLICIT** commit message rather than ambiguous message. In general, we advocate the following commit message type:
 
-We use [Semantic Commits](https://www.conventionalcommits.org/en/v1.0.0/) to make it easier to understand what a commit does and to build pretty changelogs. Please use the following prefixes for your commits:
+We use [Semantic Commits](https://www.conventionalcommits.org/en/v1.0.0/) to make it easier to understand what a commit does and to build pretty changego-project-layouts. Please use the following prefixes for your commits:
 
 + `docs: xxxx`. For example, "docs: add docs about storage installation".
 + `feature: xxxx`.For example, "feature: make result show in sorted order".
@@ -268,58 +232,47 @@ No matter what the commit message, or commit content is, we do take more emphasi
 An example for this could be:
 
 ```bash
-❯ git commit -a -s -m "docs: add a new section to the readme"
+❯ git commit -a -s -m "docs: add a new section to the README"
 ```
 
 #### PR Description
 
-PR is the only way to make change to go-project-layout project files. To help reviewers better get your purpose, **PR** description could not be too detailed. We encourage contributors to follow the [PR template](https://github.com/kubecub/.github/tree/main/.github/PULL_REQUEST_TEMPLATE.md) to finish the pull request.
+PR is the only way to make change to go-project-layout project files. To help reviewers better get your purpose, PR description could not be too detailed. We encourage contributors to follow the [PR template](https://github.com/kubecub/go-project-layout/tree/main/.github/PULL_REQUEST_TEMPLATE.md) to finish the pull request.
 
 You can find some very formal PR in [RFC](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+is%3Aopen+RFC+label%3ARFC) issues and learn about them.
 
 **📖 Opening PRs:**
 
-+ As long as you are working on your **PR**, please mark it as a draft.
-+ Please make sure that your **PR** is up-to-date with the latest changes in `main`
-+ Mention the issue that your **PR** is addressing.  For example, `Fixes: #{ID_1}, #{ID_2}`
-+ Make sure that your **PR** passes all checks.
++ As long as you are working on your PR, please mark it as a draft
++ Please make sure that your PR is up-to-date with the latest changes in `main`
++ Mention the issue that your PR is addressing (Fix: #{ID_1}, #{ID_2})
++ Make sure that your PR passes all checks
 
 **🈴 Reviewing PRs:**
 
-+ Be respectful and constructive. 
-+ Assign yourself to the **PR**.
-+ Check if all checks are passing.
-+ Suggest changes instead of simply commenting on found issues.
-+ If you are unsure about something, ask the author.
-+ If you are not sure if the changes work, try them out.
-+ Reach out to other reviewers if you are unsure about something.
-+ If you are happy with the changes, approve the **PR**.
-+ Merge the **PR** once it has all approvals and the checks are passing.
++ Be respectful and constructive 
++ Assign yourself to the PR 
++ Check if all checks are passing
++ Suggest changes instead of simply commenting on found issues
++ If you are unsure about something, ask the author
++ If you are not sure if the changes work, try them out
++ Reach out to other reviewers if you are unsure about something
++ If you are happy with the changes, approve the PR
++ Merge the PR once it has all approvals and the checks are passing
 
 **⚠️ DCO check:**
 
-We have a [DCO check](https://github.com/apps/dco) which runs on every **PR** to verify that the commit has been signed off.
-
-Once [installed](https://github.com/apps/dco#usage), this integration will set the [status](https://developer.github.com/v3/repos/statuses/) to `failed` if commits in a **Pull Request** do not contain a valid `Signed-off-by` line.
-
-To sign off the last commit you made, you can use:
+We have a DCO check that runs on every pull request to ensure code quality and maintainability. This check verifies that the commit has been signed off, indicating that you have read and agreed to the provisions of the Developer Certificate of Origin. If you have not yet signed off on the commit, you can use the following command to sign off on the last commit you made:
 
 ```bash
 ❯ git commit --amend --signoff
 ```
 
-Contributors *sign-off*  that they adhere to these requirements by adding a `Signed-off-by` line to commit messages.
-
-Git even has a `-s` command line option to append this automatically to your commit message:
-
-```bash
-❯ git commit -s -m "docs: this is my commit message"
-```
+Please note that signing off on a commit is a commitment that you have read and agreed to the provisions of the Developer Certificate of Origin. If you have not yet read this document, we strongly recommend that you take some time to read it carefully. If you have any questions about the content of this document, or if you need further assistance, please contact an administrator or relevant personnel.
 
 You can also automate signing off your commits by adding the following to your `.zshrc` or `.bashrc`:
 
-```bash
-❯ cat ~/.bashrc || cat ~/.zshrc
+```go
 git() {
   if [ $# -gt 0 ] && [[ "$1" == "commit" ]] ; then
      shift
@@ -331,36 +284,16 @@ git() {
 ```
 
 
-#### CI actions
-
-We host CI on [GitHub Actions](https://github.com/kubecub/go-project-layout/actions), we will make sure PR pass tests before we can merge it.
-
-These two kind of tests: `lint` and `unit test`
-
-`lint` tests if your code matches our code conventions, please consult [golangci-lint](https://golangci-lint.run/) and [lint config](https://github.com/kubecub/go-project-layout/blob/main/.golangci.yml)
-
-> **Note**
->
-> You can use the [Makefile](./Makefile)  to run Lint with the command `make lint`.
-
-`unit test` runs all the test in code, and the code coverage should not less than 60 percent, record us in [codeclimate](https://codeclimate.com/github/kubecub/go-project-layout) go-project-layout the unit test coverage data.
-
-
-> **Note**
->
-> We use the [Makefile](./Makefile) utility, `make tese` to run the unit tests, and the `make cover` utility to check the unit test coverage.
-
-Try your best to keep every function has been tested, it keeps the function behaves as intended.
-
 #### Docs Contribution
 
-**The documentation for go-project-layout includes:**
+The documentation for go-project-layout includes:
 
 + [README.md](https://github.com/kubecub/go-project-layout/blob/main/README.md): This file includes the basic information and instructions for getting started with go-project-layout.
 + [CONTRIBUTING.md](https://github.com/kubecub/go-project-layout/blob/main/CONTRIBUTING.md): This file contains guidelines for contributing to go-project-layout's codebase, such as how to submit issues, pull requests, and code reviews.
-+ [Official Documentation](https://nsddd.top): This is the official documentation for go-project-layout, which includes comprehensive information on all of its features, configuration options, and troubleshooting tips.
++ [DEVELOPGUIDE.md](https://github.com/kubecub/go-project-layout/blob/main/DEVELOPGUIDE.md): This file provides a more in-depth guide to developing go-project-layout, including information on the project's architecture, coding conventions, and testing practices.
++ [Official Documentation](nsddd.top): This is the official documentation for go-project-layout, which includes comprehensive information on all of its features, configuration options, and troubleshooting tips.
 
-**Please obey the following rules to better format the docs, which would greatly improve the reading experience.**
+Please obey the following rules to better format the docs, which would greatly improve the reading experience.
 
 1. Please do not use Chinese punctuations in English docs, and vice versa.
 2. Please use upper case letters where applicable, like the first letter of sentences / headings, etc.
@@ -369,48 +302,37 @@ Try your best to keep every function has been tested, it keeps the function beha
 5. Please use the correct case for technical terms, such as using `HTTP` instead of http, `MySQL` rather than mysql, `Kubernetes` instead of kubernetes, etc.
 6. Please check if there's any typos in the docs before submitting PRs.
 
-**Markfile Lint:**
-We integrated in the CICD actions [markdownlint](https://github.com/markdownlint/markdownlint), it detects Markfile specification. 
-
-> **Note**
-> We recommend reading [markdownlint rules](https://github.com/markdownlint/markdownlint/blob/main/docs/RULES.md), This document contains  a description of all rules, what they are checking for,  as well as an examples of documents that break the rule and corrected versions of the examples.
-
-
-
-
 ## Engage to help anything
 
-We choose GitHub as the primary place for go-project-layout to collaborate. So the latest updates of go-project-layout are always here. Although contributions via **PR** is an explicit way to help, we still call for any other ways.
+We choose GitHub as the primary place for go-project-layout to collaborate. So the latest updates of go-project-layout are always here. Although contributions via PR is an explicit way to help, we still call for any other ways.
 
 + reply to other's [issues](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) if you could;
 + help solve other user's problems;
 + help review other's [PR](https://github.com/kubecub/go-project-layout/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc) design; 
 + discuss about go-project-layout to make things clearer;
-+ advocate [go-project-layout](https://google.com/search?q=go-project-layout) technology beyond GitHub;
-+ write blogs on go-project-layout and so on.
++ advocate [go-project-layout](google.com/search?q=go-project-layout) technogo-project-layouty beyond GitHub;
++ write bgo-project-layouts on go-project-layout and so on.
 
 In a word, **ANY HELP IS CONTRIBUTION.**
-
-
 
 ## Release version
 
 Releases of go-project-layout are done using [Release Please](https://github.com/googleapis/release-please) and [GoReleaser](https://goreleaser.com/). The workflow looks like this:
 
-🎯 **A PR is merged to the `main` branch:**
+🎯 A PR is merged to the `main` branch:
 
 + Release please is triggered, creates or updates a new release PR
 + This is done with every merge to main, the current release PR is updated every time
 
-🎯 **Merging the 'release please' PR to `main`:**
+🎯 Merging the 'release please' PR to `main`:
 
-+ Release please is triggered, creates a new release and updates the changelog based on the commit messages
++ Release please is triggered, creates a new release and updates the changego-project-layout based on the commit messages
 + GoReleaser is triggered, builds the binaries and attaches them to the release
 + Containers are created and pushed to the container registry
 
 With the next relevant merge, a new release PR will be created and the process starts again
 
-👀 **Manually setting the version:**
+**👀 Manually setting the version:**
 
 If you want to manually set the version, you can create a PR with an empty commit message that contains the version number in the commit message. For example:
 
@@ -420,8 +342,6 @@ Such a commit can get produced as follows:
 ❯ git commit --allow-empty -m "chore: release 0.0.3" -m "Release-As: 0.0.3
 ````
 
-
-
 ## Contact Us
 
 We value close connections with our users, developers, and contributors here at kubecub. With a large community and maintainer team, we're always here to help and support you. Whether you're looking to join our community or have any questions or suggestions, we welcome you to get in touch with us.
@@ -430,14 +350,10 @@ Our most recommended way to get in touch is through [Slack](https://join.slack.c
 
 In addition to Slack, we also offer the following ways to get in touch:
 
-+ <a href="https://join.slack.com/t/kubecub/shared_invite/zt-1se0k2bae-lkYzz0_T~BYh3rjkvlcUqQ" target="_blank"><img src="https://img.shields.io/badge/Slack-kubecub%2B-blueviolet?logo=slack&amp;logoColor=white"></a>:  We also have Slack channels for you to communicate and discuss. To join, visit https://slack.com/ and join our [👀 kubecub slack](https://join.slack.com/t/kubecub/shared_invite/zt-1se0k2bae-lkYzz0_T~BYh3rjkvlcUqQ) team channel.
-
-+ <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=3293172751nss@gmail.com" target="_blank"><img src="https://img.shields.io/badge/gmail-%40kubecub-blue?style=social&kubecubo=gmail&logo=gmail"></a>: Get in touch with us on [Gmail]([3293172751nss@gmail.com](mailto:3293172751nss@gmail.com)). If you have any questions or issues that need resolving, or any suggestions and feedback for our open source projects, please feel free to contact us via email.
-
-+ <a href="https://nsddd.top" target="_blank"><img src="https://img.shields.io/badge/%E5%8D%9A%E5%AE%A2-%40kubecub-blue?style=social&logo=Octopus%20Deploy&logoColor=red"></a>: Read our [kubecub](https://nsddd.top). Our kubecub is a great place to stay up-to-date with kubecub projects and trends. On the kubecub, we share our latest developments, tech trends, and other interesting information.
-
-+ <a href="https://twitter.com/xxw3293172751" target="_blank"><img src="https://img.shields.io/badge/twitter-%40kubecub-informational?kubecubo=twitter&style=flat-square&logo=twitter"></a> : Add [Twitter]({twitter}) . If you prefer social media, our Twitter account is a great way to stay up-to-date with kubecub project news and trends. On Twitter, we share our latest tech and trends, as well as relevant news and events.
-
-+ <a href="http://sm.nsddd.top/sm0d220ad72063197b9875379403f6c88.jpg" target="_blank"><img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-smile-brightgreen?kubecubo=wechat&style=flat-square"></a>: Add [Wechat](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-smile-brightgreen?kubecubo=wechat&style=flat-square) and indicate that you are a user or developer of kubecub. We will process your request as soon as possible.
++ <a href="https://join.slack.com/t/kubecub/shared_invite/zt-1se0k2bae-lkYzz0_T~BYh3rjkvlcUqQ" target="_blank"><img src="https://img.shields.io/badge/Slack-automation%2B-blueviolet?logo=slack&amp;logoColor=white"></a> We also have Slack channels for you to communicate and discuss. To join, visit https://slack.com/ and join our [👀 kubecub slack](https://join.slack.com/t/kubecub/shared_invite/zt-1se0k2bae-lkYzz0_T~BYh3rjkvlcUqQ) team channel.
++ <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=3293172751nss@gmail.com" target="_blank"><img src="https://img.shields.io/badge/gmail-%40kubecub-blue?style=social&kubecubo=gmail&logo=gmail"></a> Get in touch with us on [📨Gmail: 3293172751nss@gmail.com](mailto:3293172751nss@gmail.com).  If you have any questions or issues that need resolving, or any suggestions and feedback for our open source projects, please feel free to contact us via email.
++ <a href="nsddd.top" target="_blank"><img src="https://img.shields.io/badge/%E5%8D%9A%E5%AE%A2-%40kubecub-blue?style=social&logo=Octopus%20Deploy&logoColor=red"></a> Read our [🤖kubecub](nsddd.top). Our kubecub is a great place to stay up-to-date with kubecub projects and trends. On the kubecub, we share our latest developments, tech trends, and other interesting information.
++ <a href="https://twitter.com/xxw3293172751" target="_blank"><img src="https://img.shields.io/badge/twitter-%40kubecub-informational?kubecubo=twitter&style=flat-square&logo=twitter"></a> Add [🕊️Twitter](https://twitter.com/xxw3293172751) . If you prefer social media, our Twitter account is a great way to stay up-to-date with kubecub project news and trends. On Twitter, we share our latest tech and trends, as well as relevant news and events.
++ <a href="http://sm.nsddd.top/sm0d220ad72063197b9875379403f6c88.jpg" target="_blank"><img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-smile-brightgreen?kubecubo=wechat&style=flat-square?logo=wechat"></a> Add [📲Wechat](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-smile-brightgreen?kubecubo=wechat&style=flat-square) and indicate that you are a user or developer of kubecub. We will process your request as soon as possible.
 
 Whether you're looking to join our community or have any questions or suggestions, we welcome you to get in touch with us.
