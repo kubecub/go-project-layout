@@ -44,7 +44,7 @@ Read about the [go-project-layout](https://github.com/kubecub/go-project-layout/
 
 > **Note**: You can get started quickly with go-project-layout.
 
-1. Generate a new repository from the template.
+1. Generate a [new repository](https://github.com/kubecub/go-project-layout/generate) from the template.
 2. Clone the repository locally.
 3. Update files, read the README files in each directory.
 4. Write your code and tests. 
@@ -62,7 +62,7 @@ Read about the [go-project-layout](https://github.com/kubecub/go-project-layout/
   <summary>Work with actions</summary>
 
 Actions provide handling of PR and issue.
-We used the bot @kubbot, It can detect issues in Chinese and translate them to English, and you can interact with it using the command `/comment`.
+We used the bot [🚀@kubbot](https://github.com/kubbot), It can detect issues in Chinese and translate them to English, and you can interact with it using the command `/comment`.
 
 Comment in an issue:
 
@@ -83,7 +83,7 @@ Comment in an issue:
   <summary>Work with Docker</summary>
 
 ```bash
-$ make deploy
+❯ make deploy
 ```
 
 </details>
