@@ -308,7 +308,7 @@ We choose GitHub as the primary place for go-project-layout to collaborate. So t
 
 + reply to other's [issues](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) if you could;
 + help solve other user's problems;
-+ help review other's [PR](https://github.com/kubecub/go-project-layout/pulls?q=is:pr+is:open+sort:updated-desc) design; 
++ help review other's [PR](https://github.com/kubecub/go-project-layout/pulls) design; 
 + discuss about go-project-layout to make things clearer;
 + advocate [go-project-layout](google.com/search?q=go-project-layout) technogo-project-layouty beyond GitHub;
 + write bgo-project-layouts on go-project-layout and so on.
