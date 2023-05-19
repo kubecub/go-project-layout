@@ -1,2 +1,8 @@
-# go-project-layout
-A canonical Go project structure and layout for generating scaffolding projects.   
+# `/api`
+
+OpenAPI/Swagger specs, JSON schema files, protocol definition files.
+
+Examples:
+
+* https://github.com/kubernetes/kubernetes/tree/master/api
+* https://github.com/moby/moby/tree/master/api
