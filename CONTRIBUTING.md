@@ -20,7 +20,7 @@ This document provides guidelines and best practices to help you contribute effe
 
 We hope that anyone can join go-project-layout , even if you are a student, writer, translator
 
-Please meet the minimum version of the Go language published in [go.mod](./go.mod). If you want to manage the Go language version, we provide tools to install [gvm](https://github.com/moovweb/gvm) in our [Makefile](./Makefile)
+Please meet the minimum version of the Go language published in [go.mod](https://github.com/kubecub/go-project-layout/tree/main/go.mod). If you want to manage the Go language version, we provide tools to install [gvm](https://github.com/moovweb/gvm) in our [Makefile](./Makefile)
 
 You'd better use Linux OR WSL as the development environment, Linux with [Makefile](./Makefile) can help you quickly build and test go-project-layout project.
 
@@ -32,7 +32,7 @@ The [Makefile](./Makefile) is for every developer, even if you don't know how to
 
 #### Code and doc contribution
 
-Every action to make project go-project-layout better is encouraged. On GitHub, every improvement for go-project-layout could be via a [PR](https://github.com/go-project-layout/pulls) (short for pull request).
+Every action to make project go-project-layout better is encouraged. On GitHub, every improvement for go-project-layout could be via a [PR](https://github.com/kubecub/go-project-layout/tree/main/pulls) (short for pull request).
 
 + If you find a typo, try to fix it!
 + If you find a bug, try to fix it!
@@ -48,7 +48,7 @@ Every action to make project go-project-layout better is encouraged. On GitHub, 
 #### Where should I start?
 
 + If you are new to the project, don't know how to contribute go-project-layout, please check out the [good first issue](https://github.com/kubecub/go-project-layout/issues?q=is%3Aopen+label%3A"good+first+issue"+sort%3Aupdated-desc) label.
-+ You should be good at filtering the go-project-layout issue tags and finding the ones you like, such as [RFC](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+is%3Aopen+RFC+label%3ARFC) for big initiatives, features for [feature](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+label%3Afeature) proposals, and [bug](https://github.com/{github/issues?q=is%3Aissue+label%3Abug+) fixes.
++ You should be good at filtering the go-project-layout issue tags and finding the ones you like, such as [RFC](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+is%3Aopen+RFC+label%3ARFC) for big initiatives, features for [feature](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+label%3Afeature) proposals, and [bug](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+label%3Abug+) fixes.
 + If you are looking for something to work on, check out our [open issues](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc).
 + If you have an idea for a new feature, please [open an issue](https://github.com/kubecub/go-project-layout/issues/new/choose), and we can discuss it.
 
@@ -289,9 +289,9 @@ git() {
 The documentation for go-project-layout includes:
 
 + [README.md](https://github.com/kubecub/go-project-layout/blob/main/README.md): This file includes the basic information and instructions for getting started with go-project-layout.
++ [README_zh-CN.md](https://github.com/OpenIMSDK/openim-sdk-core/blob/main/README_zh.md): This file includes the basic information and instructions for getting started with OpenIM in Chinese.
 + [CONTRIBUTING.md](https://github.com/kubecub/go-project-layout/blob/main/CONTRIBUTING.md): This file contains guidelines for contributing to go-project-layout's codebase, such as how to submit issues, pull requests, and code reviews.
-+ [DEVELOPGUIDE.md](https://github.com/kubecub/go-project-layout/blob/main/DEVELOPGUIDE.md): This file provides a more in-depth guide to developing go-project-layout, including information on the project's architecture, coding conventions, and testing practices.
-+ [Official Documentation](nsddd.top): This is the official documentation for go-project-layout, which includes comprehensive information on all of its features, configuration options, and troubleshooting tips.
++ [Official Documentation](https://nsddd.top): This is the official documentation for go-project-layout, which includes comprehensive information on all of its features, configuration options, and troubleshooting tips.
 
 Please obey the following rules to better format the docs, which would greatly improve the reading experience.
 
@@ -352,7 +352,7 @@ In addition to Slack, we also offer the following ways to get in touch:
 
 + <a href="https://join.slack.com/t/kubecub/shared_invite/zt-1se0k2bae-lkYzz0_T~BYh3rjkvlcUqQ" target="_blank"><img src="https://img.shields.io/badge/Slack-automation%2B-blueviolet?logo=slack&amp;logoColor=white"></a> We also have Slack channels for you to communicate and discuss. To join, visit https://slack.com/ and join our [👀 kubecub slack](https://join.slack.com/t/kubecub/shared_invite/zt-1se0k2bae-lkYzz0_T~BYh3rjkvlcUqQ) team channel.
 + <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=3293172751nss@gmail.com" target="_blank"><img src="https://img.shields.io/badge/gmail-%40kubecub-blue?style=social&kubecubo=gmail&logo=gmail"></a> Get in touch with us on [📨Gmail: 3293172751nss@gmail.com](mailto:3293172751nss@gmail.com).  If you have any questions or issues that need resolving, or any suggestions and feedback for our open source projects, please feel free to contact us via email.
-+ <a href="nsddd.top" target="_blank"><img src="https://img.shields.io/badge/%E5%8D%9A%E5%AE%A2-%40kubecub-blue?style=social&logo=Octopus%20Deploy&logoColor=red"></a> Read our [🤖kubecub](nsddd.top). Our kubecub is a great place to stay up-to-date with kubecub projects and trends. On the kubecub, we share our latest developments, tech trends, and other interesting information.
++ <a href="https://nsddd.top" target="_blank"><img src="https://img.shields.io/badge/%E5%8D%9A%E5%AE%A2-%40kubecub-blue?style=social&logo=Octopus%20Deploy&logoColor=red"></a> Read our [🤖kubecub](https://nsddd.top). Our kubecub is a great place to stay up-to-date with kubecub projects and trends. On the kubecub, we share our latest developments, tech trends, and other interesting information.
 + <a href="https://twitter.com/xxw3293172751" target="_blank"><img src="https://img.shields.io/badge/twitter-%40kubecub-informational?kubecubo=twitter&style=flat-square&logo=twitter"></a> Add [🕊️Twitter](https://twitter.com/xxw3293172751) . If you prefer social media, our Twitter account is a great way to stay up-to-date with kubecub project news and trends. On Twitter, we share our latest tech and trends, as well as relevant news and events.
 + <a href="http://sm.nsddd.top/sm0d220ad72063197b9875379403f6c88.jpg" target="_blank"><img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-smile-brightgreen?kubecubo=wechat&style=flat-square?logo=wechat"></a> Add [📲Wechat](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-smile-brightgreen?kubecubo=wechat&style=flat-square) and indicate that you are a user or developer of kubecub. We will process your request as soon as possible.
 
