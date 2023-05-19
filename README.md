@@ -1,6 +1,5 @@
 <h1 align="center" style="border-bottom: none">
     <b>
-      <a href="https://kubesphere.io/"><img src="https://github.com/kubecub/community/blob/main/logo/linkedin_banner_image_2.png" alt="banner" width="200px"></a></br>
         <a href="https://docker.nsddd.top">go-project-layout</a><br>
     </b>
 </h1>
