@@ -32,7 +32,7 @@ The [Makefile](./Makefile) is for every developer, even if you don't know how to
 
 #### Code and doc contribution
 
-Every action to make project go-project-layout better is encouraged. On GitHub, every improvement for go-project-layout could be via a [PR](https://github.com/kubecub/go-project-layout/tree/main/pulls) (short for pull request).
+Every action to make project go-project-layout better is encouraged. On GitHub, every improvement for go-project-layout could be via a [PR](https://github.com/kubecub/go-project-layout/pulls) (short for pull request).
 
 + If you find a typo, try to fix it!
 + If you find a bug, try to fix it!
