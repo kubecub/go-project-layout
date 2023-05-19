@@ -1,5 +1,5 @@
 name: Failing Test
-description: Report continuously failing tests or jobs in OpenIM CI
+description: Report continuously failing tests or jobs in kubecub CI
 title: "🤖Failing test: "
 labels: kind/failing-test
 body:
@@ -8,7 +8,7 @@ body:
     attributes:
       label: Which job are failing?
       placeholder: |
-        Please only use this template for submitting reports about continuously failing tests or jobs in OpenIM CI.
+        Please only use this template for submitting reports about continuously failing tests or jobs in kubecub CI.
     validations:
       required: true
 

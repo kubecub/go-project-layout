@@ -1,15 +1,15 @@
 ---
 name: RFC
-about: The OpenIM RFC design template, which you should use if you have a detailed and precise feature design in mind.
+about: The kubecub RFC design template, which you should use if you have a detailed and precise feature design in mind.
 title: "🔮[RFC #0000]: "
 labels: "proposal,RFC,kind/feature,enhancement"
 
 ---
 
-# [RFC #0000] OpenIMSDK proposal template
+# [RFC #0000] kubecub proposal template
 <!--
-🤖 design template: https://github.com/OpenIMSDK/community/blob/main/0000-template.md
-⚠️ Please submit a PR to https://github.com/OpenIMSDK/community/tree/main/RFC according to the specification after the design is completed
+🤖 design template: https://github.com/kubecub/community/blob/main/0000-template.md
+⚠️ Please submit a PR to https://github.com/kubecub/community/tree/main/RFC according to the specification after the design is completed
 -->
 ## Meta
 [meta]: #meta
@@ -18,13 +18,13 @@ labels: "proposal,RFC,kind/feature,enhancement"
 - Author(s): (Github usernames)
 - Status: Draft <!-- Acceptable values: Draft, Approved, On Hold, Superseded -->
 - RFC Pull Request: (leave blank)
-- OpenIMSDK Pull Request: (leave blank)
-- OpenIMSDK Issue: (leave blank)
+- kubecub Pull Request: (leave blank)
+- kubecub Issue: (leave blank)
 - Supersedes: (put "N/A" unless this replaces an existing RFC, then link to that RFC)
 
 
 ## 📇Topics
-- [\[RFC #0000\] OpenIMSDK proposal template](#rfc-0000-openimsdk-proposal-template)
+- [\[RFC #0000\] kubecub proposal template](#rfc-0000-kubecub-proposal-template)
   - [Meta](#meta)
   - [📇Topics](#topics)
   - [Summary](#summary)
@@ -49,7 +49,7 @@ One paragraph explanation of the feature.
 ## Definitions
 [definitions]: #definitions
 
-Make a list of the definitions that may be useful for those reviewing. Include phrases and words that OpenIMSDK authors or other interested parties may not be familiar with.
+Make a list of the definitions that may be useful for those reviewing. Include phrases and words that kubecub authors or other interested parties may not be familiar with.
 
 ## Motivation
 [motivation]: #motivation
@@ -64,7 +64,7 @@ Make a list of the definitions that may be useful for those reviewing. Include p
 This provides a high level overview of the feature.
 
 - Define any new terminology.
-- Define the target persona: OpenIMSDK author, OpenIMSDK user, platform operator, platform implementor, and/or project contributor.
+- Define the target persona: kubecub author, kubecub user, platform operator, platform implementor, and/or project contributor.
 - Explaining the feature largely in terms of examples.
 - If applicable, provide sample error messages, deprecation warnings, or migration guidance.
 - If applicable, describe the differences between teaching this to existing users and new users.
@@ -79,7 +79,7 @@ The section should return to the examples given in the previous section, and exp
 ## Migration
 [migration]: #migration
 
-This section should document breaks to public API and breaks in compatibility due to this RFC's proposed changes. In addition, it should document the proposed steps that one would need to take to work through these changes. Care should be give to include all applicable personas, such as platform developers, OpenIMSDK developers, OpenIMSDK users and consumers of OpenIMSDK images.
+This section should document breaks to public API and breaks in compatibility due to this RFC's proposed changes. In addition, it should document the proposed steps that one would need to take to work through these changes. Care should be give to include all applicable personas, such as platform developers, kubecub developers, kubecub users and consumers of kubecub images.
 
 ## Drawbacks
 [drawbacks]: #drawbacks
@@ -108,7 +108,7 @@ Discuss prior art, both the good and bad.
 ## Spec. Changes (OPTIONAL)
 [spec-changes]: #spec-changes
 Does this RFC entail any proposed changes to the core specifications or extensions? If so, please document changes here.
-Examples of a spec. change might be new lifecycle flags, new `OpenIMSDK.toml` fields, new fields in the OpenIMSDKage label, etc.
+Examples of a spec. change might be new lifecycle flags, new `kubecub.toml` fields, new fields in the kubecubage label, etc.
 This section is not intended to be binding, but as discussion of an RFC unfolds, if spec changes are necessary, they should be documented here.
 
 ## History

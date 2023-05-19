@@ -358,7 +358,7 @@ Try your best to keep every function has been tested, it keeps the function beha
 
 + [README.md](https://github.com/kubecub/go-project-layout/blob/main/README.md): This file includes the basic information and instructions for getting started with go-project-layout.
 + [CONTRIBUTING.md](https://github.com/kubecub/go-project-layout/blob/main/CONTRIBUTING.md): This file contains guidelines for contributing to go-project-layout's codebase, such as how to submit issues, pull requests, and code reviews.
-+ [Official Documentation](nsddd.top): This is the official documentation for go-project-layout, which includes comprehensive information on all of its features, configuration options, and troubleshooting tips.
++ [Official Documentation](https://nsddd.top): This is the official documentation for go-project-layout, which includes comprehensive information on all of its features, configuration options, and troubleshooting tips.
 
 **Please obey the following rules to better format the docs, which would greatly improve the reading experience.**
 
@@ -434,7 +434,7 @@ In addition to Slack, we also offer the following ways to get in touch:
 
 + <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=3293172751nss@gmail.com" target="_blank"><img src="https://img.shields.io/badge/gmail-%40kubecub-blue?style=social&kubecubo=gmail&logo=gmail"></a>: Get in touch with us on [Gmail]([3293172751nss@gmail.com](mailto:3293172751nss@gmail.com)). If you have any questions or issues that need resolving, or any suggestions and feedback for our open source projects, please feel free to contact us via email.
 
-+ <a href="nsddd.top" target="_blank"><img src="https://img.shields.io/badge/%E5%8D%9A%E5%AE%A2-%40kubecub-blue?style=social&logo=Octopus%20Deploy&logoColor=red"></a>: Read our [kubecub](nsddd.top). Our kubecub is a great place to stay up-to-date with kubecub projects and trends. On the kubecub, we share our latest developments, tech trends, and other interesting information.
++ <a href="https://nsddd.top" target="_blank"><img src="https://img.shields.io/badge/%E5%8D%9A%E5%AE%A2-%40kubecub-blue?style=social&logo=Octopus%20Deploy&logoColor=red"></a>: Read our [kubecub](https://nsddd.top). Our kubecub is a great place to stay up-to-date with kubecub projects and trends. On the kubecub, we share our latest developments, tech trends, and other interesting information.
 
 + <a href="https://twitter.com/xxw3293172751" target="_blank"><img src="https://img.shields.io/badge/twitter-%40kubecub-informational?kubecubo=twitter&style=flat-square&logo=twitter"></a> : Add [Twitter]({twitter}) . If you prefer social media, our Twitter account is a great way to stay up-to-date with kubecub project news and trends. On Twitter, we share our latest tech and trends, as well as relevant news and events.
 

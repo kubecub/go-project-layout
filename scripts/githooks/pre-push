@@ -11,18 +11,18 @@ RED="\e[31m"
 ENDCOLOR="\e[0m"
 
 printMessage() {
-   printf "${YELLOW}OpenIM : $1${ENDCOLOR}\n"
+   printf "${YELLOW}kubecub : $1${ENDCOLOR}\n"
 }
 
 printSuccess() {
-   printf "${GREEN}OpenIM : $1${ENDCOLOR}\n"
+   printf "${GREEN}kubecub : $1${ENDCOLOR}\n"
 }
 
 printError() {
-   printf "${RED}OpenIM : $1${ENDCOLOR}\n"
+   printf "${RED}kubecub : $1${ENDCOLOR}\n"
 }
 
-printMessage "Running local OpenIM pre-push hook."
+printMessage "Running local kubecub pre-push hook."
 
 if [[ `git status --porcelain` ]]; then
   printError "This script needs to run against committed code only. Please commit or stash you changes."

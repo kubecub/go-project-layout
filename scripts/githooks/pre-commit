@@ -21,18 +21,18 @@ RED="\e[31m"
 ENDCOLOR="\e[0m"
 
 printMessage() {
-   printf "${YELLOW}OpenIM : $1${ENDCOLOR}\n"
+   printf "${YELLOW}kubecub : $1${ENDCOLOR}\n"
 }
 
 printSuccess() {
-   printf "${GREEN}OpenIM : $1${ENDCOLOR}\n"
+   printf "${GREEN}kubecub : $1${ENDCOLOR}\n"
 }
 
 printError() {
-   printf "${RED}OpenIM : $1${ENDCOLOR}\n"
+   printf "${RED}kubecub : $1${ENDCOLOR}\n"
 }
 
-printMessage "Running local OpenIM pre-commit hook."
+printMessage "Running local kubecub pre-commit hook."
 
 # flutter format .
 # https://gist.github.com/cubxxw/126b72104ac0b0ca484c9db09c3e5694#file-githook-md

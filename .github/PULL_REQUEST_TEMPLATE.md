@@ -3,7 +3,7 @@
 🫰 Thanks for sending a pull request!  Here are some tips for you:
 
 1. If this is your first time, please read our contributor guidelines: 
-📇 https://github.com/OpenIMSDK/community/blob/main/CONTRIBUTING.md
+📇 https://github.com/kubecub/community/blob/main/CONTRIBUTING.md
 
 2. Ensure you have added or ran the appropriate tests for your PR:
 -->
@@ -67,6 +67,6 @@ linking directly to the master branch. This ensures that links reference a
 specific point in time, rather than a document that may change over time.
 
 In the sharers Guide, we recommend the following documents:
-1. Using GitHub RFCs template: https://github.com/OpenIMSDK/community/blob/main/0000-template.md
+1. Using GitHub RFCs template: https://github.com/kubecub/community/blob/main/0000-template.md
 2. Use Google Docs OR Notion and share it with the community.
 -->

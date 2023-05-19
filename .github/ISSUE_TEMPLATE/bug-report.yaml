@@ -1,5 +1,5 @@
 name: Bug Report
-description: Report a bug encountered while operating OpenIM
+description: Report a bug encountered while operating kubecub
 title: "Bug: "
 labels: ["kind/bug"]
 body:
