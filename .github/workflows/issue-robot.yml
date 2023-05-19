@@ -1,0 +1,22 @@
+# Copyright © 2023 KubeCub & Xinwei Xiong(cubxxw). All rights reserved.
+#
+# Licensed under the MIT License (the "License");
+# you may not use this file except in compliance with the License.
+
+name: 'issue translator'
+on:
+  issue_comment:
+    types: [created]
+  issues:
+    types: [opened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: usthe/issues-translate-action@v2.7
+        with:
+          # it is not necessary to decide whether you need to modify the issue header content
+          IS_MODIFY_TITLE: true
+          BOT_GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN }}
+          # Required, input your bot github token

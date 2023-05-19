@@ -1,0 +1,25 @@
+# Copyright © 2023 KubeCub & Xinwei Xiong(cubxxw). All rights reserved.
+#
+# Licensed under the MIT License (the "License");
+# you may not use this file except in compliance with the License.
+
+name: Test Makefile build
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y make
+      
+      - name: Build project
+        run: make build
+      
+      - name: Test build artifacts
+        run: |
+          # Add your tests here to check the build artifacts

@@ -1,9 +1,13 @@
 <h1 align="center" style="border-bottom: none">
     <b>
+      <a href="https://kubesphere.io/"><img src="https://github.com/kubecub/community/blob/main/logo/linkedin_banner_image_2.png" alt="banner" width="200px"></a></br>
         <a href="https://docker.nsddd.top">go-project-layout</a><br>
     </b>
-    ⭐️  Template for a typical module written on Go.  ⭐️ <br>
 </h1>
+<h3 align="center" style="border-bottom: none">
+      ⭐️  Template for a typical module written on Go.  ⭐️ <br>
+<h3>
+
 
 <p align=center>
 <a href="https://goreportcard.com/report/github.com/kubecub/go-project-layout"><img src="https://goreportcard.com/badge/github.com/kubecub/go-project-layout" alt="A+"></a>
@@ -23,6 +27,8 @@
 
 </p>
 
+----
+
 ## 🧩 Awesome features
 
 At Github, we want to start new projects faster using best practices with a predefined structure and focusing on core ideas implementation rather than wasting time on environment configuration and copying boilerplate code.
@@ -30,6 +36,9 @@ At Github, we want to start new projects faster using best practices with a pred
 I defined a spec template that I could use to quickly start building a full-fledged project.
 
 In each directory, there is a README.md and an OWNERS, which explains what the directory does and who owns it.
+
+**Labels denger:**
+Read about the [go-project-layout](https://github.com/kubecub/go-project-layout/labels) tag design
 
 
 ## 🛫 Quick start 
@@ -75,10 +84,7 @@ Comment in an issue:
   <summary>Work with Docker</summary>
 
 ```bash
-$ make go-1.11 # or go-1.12, etc.
-/src# make go-env 2>/dev/null | grep GOVERSION
-# GOVERSION:   1.11.13
-/src# make test
+$ make deploy
 ```
 
 </details>
