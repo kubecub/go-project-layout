@@ -7,7 +7,6 @@
 # get the repo root and output path
 ROOT_PACKAGE=github.com/kubecub/feishu-sheet-parser
 OUT_DIR=$(REPO_ROOT)/_output
-################################################################################
 # ==============================================================================
 # define the default goal
 #
@@ -57,7 +56,7 @@ endif
 # Linux command settings
 FIND := find . ! -path './image/*' ! -path './vendor/*' ! -path './bin/*'
 XARGS := xargs -r
-LICENSE_TEMPLATE ?= $(ROOT_DIR)/scripts/LICENSE_TEMPLATE
+LICENSE_TEMPLATE ?= $(ROOT_DIR)/scripts/LICENSE_TEMPLATES
 
 # ==============================================================================
 # Targets
@@ -148,3 +147,5 @@ clean:
 help: Makefile
 	@printf "\n\033[1mUsage: make <TARGETS> ...\033[0m\n\n\\033[1mTargets:\\033[0m\n\n"
 	@sed -n 's/^##//p' $< | awk -F':' '{printf "\033[36m%-28s\033[0m %s\n", $$1, $$2}' | sed -e 's/^/ /'
+
+################################################################################
