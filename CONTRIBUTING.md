@@ -289,7 +289,7 @@ git() {
 The documentation for go-project-layout includes:
 
 + [README.md](https://github.com/kubecub/go-project-layout/blob/main/README.md): This file includes the basic information and instructions for getting started with go-project-layout.
-+ [README_zh-CN.md](https://github.com/OpenIMSDK/openim-sdk-core/blob/main/README_zh.md): This file includes the basic information and instructions for getting started with OpenIM in Chinese.
++ [README_zh-CN.md](https://github.com/kubecub/go-project-layout/blob/main/README_zh.md): This file includes the basic information and instructions for getting started with OpenIM in Chinese.
 + [CONTRIBUTING.md](https://github.com/kubecub/go-project-layout/blob/main/CONTRIBUTING.md): This file contains guidelines for contributing to go-project-layout's codebase, such as how to submit issues, pull requests, and code reviews.
 + [Official Documentation](https://nsddd.top): This is the official documentation for go-project-layout, which includes comprehensive information on all of its features, configuration options, and troubleshooting tips.
 
@@ -308,7 +308,7 @@ We choose GitHub as the primary place for go-project-layout to collaborate. So t
 
 + reply to other's [issues](https://github.com/kubecub/go-project-layout/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) if you could;
 + help solve other user's problems;
-+ help review other's [PR](https://github.com/kubecub/go-project-layout/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc) design; 
++ help review other's [PR](https://github.com/kubecub/go-project-layout/pulls?q=is:pr+is:open+sort:updated-desc) design; 
 + discuss about go-project-layout to make things clearer;
 + advocate [go-project-layout](google.com/search?q=go-project-layout) technogo-project-layouty beyond GitHub;
 + write bgo-project-layouts on go-project-layout and so on.
