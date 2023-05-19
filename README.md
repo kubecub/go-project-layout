@@ -169,19 +169,13 @@ Catalog standardization design structure:
 │   ├── OWNERS               # Internal code owners
 │   ├── README.md            # Internal code documentation
 │   ├── app                  # Application logic
-│   ├── controllers          # Controllers for handling requests
-│   ├── model                # Data models and database interactions
 │   ├── pkg                  # Internal packages
-│   ├── service              # Services for business logic
-│   ├── utils                # Utility functions and helpers
-│   └── views                # View templates and rendering
+│   └── utils                # Utility functions and helpers
 ├── pkg                      # Public packages and libraries
 │   ├── OWNERS               # Package owners
 │   ├── README.md            # Package documentation
 │   ├── common               # Common utilities and helpers
-│   ├── feishu               # Feishu integration
-│   ├── http                 # HTTP-related utilities
-│   ├── logging              # Logging utilities
+│   ├── log                  # Log utilities
 │   ├── tools                # Tooling and scripts
 │   ├── utils                # General utility functions
 │   └── version              # Version information
