@@ -310,7 +310,7 @@ We choose GitHub as the primary place for go-project-layout to collaborate. So t
 + help solve other user's problems;
 + help review other's [PR](https://github.com/kubecub/go-project-layout/pulls) design; 
 + discuss about go-project-layout to make things clearer;
-+ advocate [go-project-layout](google.com/search?q=go-project-layout) technogo-project-layouty beyond GitHub;
++ advocate [go-project-layout](https://google.com/search?q=go-project-layout) technogo-project-layouty beyond GitHub;
 + write bgo-project-layouts on go-project-layout and so on.
 
 In a word, **ANY HELP IS CONTRIBUTION.**
