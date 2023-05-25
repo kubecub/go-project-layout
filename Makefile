@@ -30,10 +30,20 @@ OUTPUT_DIR := $(ROOT_DIR)/_output
 $(shell mkdir -p $(OUTPUT_DIR))
 endif
 
-## BIN_DIR: The directory where the build output is stored.
+# BIN_DIR: The directory where the build output is stored.
 ifeq ($(origin BIN_DIR),undefined)
 BIN_DIR := $(OUTPUT_DIR)/bin
 $(shell mkdir -p $(BIN_DIR))
+endif
+
+ifeq ($(origin TOOLS_DIR),undefined)
+TOOLS_DIR := $(OUTPUT_DIR)/tools
+$(shell mkdir -p $(TOOLS_DIR))
+endif
+
+ifeq ($(origin TMP_DIR),undefined)
+TMP_DIR := $(OUTPUT_DIR)/tmp
+$(shell mkdir -p $(TMP_DIR))
 endif
 
 ifeq ($(origin VERSION), undefined)
@@ -170,8 +180,8 @@ go.build.%:
 	@echo "=====> PLATFORM=$(PLATFORM)"
 	@echo "=====> BIN_DIR=$(BIN_DIR)"
 	@echo "===========> Building binary $(COMMAND) $(VERSION) for $(OS)_$(ARCH)"
-	@mkdir -p $(OUTPUT_DIR)/platforms/$(OS)/$(ARCH)
-	@CGO_ENABLED=0 GOOS=$(OS) GOARCH=$(ARCH) $(GO) build $(GO_BUILD_FLAGS) -o $(OUTPUT_DIR)/platforms/$(OS)/$(ARCH)/$(COMMAND)$(GO_OUT_EXT) $(ROOT_PACKAGE)/cmd/$(COMMAND)
+	@mkdir -p $(BIN_DIR)/platforms/$(OS)/$(ARCH)
+	@CGO_ENABLED=0 GOOS=$(OS) GOARCH=$(ARCH) $(GO) build $(GO_BUILD_FLAGS) -o $(BIN_DIR)/platforms/$(OS)/$(ARCH)/$(COMMAND)$(GO_OUT_EXT) $(ROOT_PACKAGE)/cmd/$(COMMAND)
 
 .PHONY: go.build.multiarch
 go.build.multiarch: go.build.verify $(foreach p,$(PLATFORMS),$(addprefix go.build., $(addprefix $(p)., $(BINS))))
@@ -209,6 +219,7 @@ lint:
 .PHONY: style
 style: fmt vet lint
 
+
 ## test: Run unit test
 .PHONY: test
 test: 
@@ -236,8 +247,8 @@ copyright-add:
 ## clean: Clean all builds.
 .PHONY: clean
 clean:
-	@echo "===========> Cleaning all builds OUTPUT_DIR($(OUTPUT_DIR))"
-	@-rm -vrf $(OUTPUT_DIR)
+	@echo "===========> Cleaning all builds TMP_DIR($(TMP_DIR)) AND BIN_DIR($(BIN_DIR))"
+	@-rm -vrf $(TMP_DIR) $(BIN_DIR)
 	@echo "===========> End clean..."
 
 ## help: Show this help info.
@@ -246,3 +257,54 @@ help: Makefile
 	@printf "\n\033[1mUsage: make <TARGETS> ...\033[0m\n\n\\033[1mTargets:\\033[0m\n\n"
 	@sed -n 's/^##//p' $< | awk -F':' '{printf "\033[36m%-28s\033[0m %s\n", $$1, $$2}' | sed -e 's/^/ /'
 ################################################################################
+# tools
+BUILD_TOOLS ?= go-gitlint golangci-lint goimports addlicense deepcopy-gen conversion-gen ginkgo go-junit-report 
+
+# tools.verify.%: Check if a tool is installed and install it
+.PHONY: tools.verify.%
+tools.verify.%:
+	@echo "===========> Verifying $* is installed"
+	@if [ ! -f $(TOOLS_DIR)/$* ]; then GOBIN=$(TOOLS_DIR) $(MAKE) tools.install.$*; fi
+	@echo "===========> $* is install in $(TOOLS_DIR)/$*"
+
+# tools: Install a must tools
+.PHONY: tools
+tools: $(addprefix tools.verify., $(BUILD_TOOLS))
+
+# tools.install.%: Install a single tool in $GOBIN/
+.PHONY: tools.install.%
+tools.install.%:
+	@echo "===========> Installing $,The default installation path is $(GOBIN)/$*"
+	@$(MAKE) install.$*
+
+.PHONY: install.golangci-lint
+install.golangci-lint:
+	@$(GO) install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+
+.PHONY: install.goimports
+install.goimports:
+	@$(GO) install golang.org/x/tools/cmd/goimports@latest
+
+.PHONY: install.addlicense
+install.addlicense:
+	@$(GO) install github.com/google/addlicense@latest
+
+.PHONY: install.deepcopy-gen
+install.deepcopy-gen:
+	@$(GO) install k8s.io/code-generator/cmd/deepcopy-gen@latest
+
+.PHONY: install.conversion-gen
+install.conversion-gen:
+	@$(GO) install k8s.io/code-generator/cmd/conversion-gen@latest
+
+.PHONY: install.ginkgo
+install.ginkgo:
+	@$(GO) install github.com/onsi/ginkgo/ginkgo@v1.16.2
+
+.PHONY: install.go-gitlint
+install.go-gitlint:
+	@$(GO) install github.com/marmotedu/go-gitlint/cmd/go-gitlint@latest
+
+.PHONY: install.go-junit-report
+install.go-junit-report:
+	@$(GO) install github.com/jstemmer/go-junit-report@latest
