@@ -138,40 +138,10 @@ Comment in an issue:
 
 ## 🕋 architecture diagram
 ```mermaid
-graph LR
-
-subgraph External Services
-feishuAPI --> sheetParser
-end
-
-subgraph Sheet Parser & Manager
-sheetParser[Sheet Parser] --> versionControl
-versionControl[Version Control] --> sheetDisplay
-end
-
-subgraph Display
-sheetDisplay[Sheet Display] --> UI
-end
-
-subgraph Backend
-versionControl --> API
-end
-
-subgraph Frontend
-UI[User Interface]
-end
-
-API --> UI
-UI --> feishuAPI 
 ```
 
 **MVC Architecture Design:**
 ```mermaid
-graph LR
-A[View] -->|1. User interaction| B(Controller)
-B -->|2. Requests data| C(Model)
-C -->|3. Returns data| B
-B -->|4. Updates view| A
 ```
 
 ## 🤖 File Directory Description
