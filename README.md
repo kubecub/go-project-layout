@@ -59,6 +59,53 @@ Read about the [go-project-layout](https://github.com/kubecub/go-project-layout/
 
 </details>
 <details>
+  <summary>Git hook(push & commit)</summary>
+
+```bash
+❯ make # To trigger the hook script, move to.git
+❯ tree .git/hooks
+.git/hooks
+├── applypatch-msg.sample
+├── commit-msg
+├── commit-msg.sample
+├── fsmonitor-watchman.sample
+├── post-update.sample
+├── pre-applypatch.sample
+├── pre-commit
+├── pre-commit.sample
+├── pre-merge-commit.sample
+├── pre-push
+├── pre-push.sample
+├── pre-rebase.sample
+├── pre-receive.sample
+├── prepare-commit-msg.sample
+├── push-to-checkout.sample
+└── update.sample
+❯ cp ../sealer/_output/bin/sealer/linux_amd64/sealer ./ # add big binary file
+❯ git add .
+❯ git commit -a -s -m "nono"    # Excess commit blocking
+kubecub : Running local kubecub pre-commit hook.
+kubecub : File sealer is 71 MB, which is larger than our configured limit of 2 MB
+kubecub : If you really need to commit this file, you can override the size limit by setting the GIT_FILE_SIZE_LIMIT environment variable, e.g. GIT_FILE_SIZE_LIMIT=42000000 for 42MB. Or, commit with the --no-verify switch to skip the check entirely.
+kubecub : Commit aborted
+❯ rm -rf .git # remote big binary 
+❯ git commit -a -s -m "nono"    # Bad commit blocking
+kubecub : Running local kubecub pre-commit hook.
+kubecub : Running the kubecub commit-msg hook.
+fakehsh: subject does not match regex [^(build|chore|ci|docs|feat|feature|fix|perf|refactor|revert|style|test)(.*)?:\s?.*]
+fakehsh: subject length less than min [10]
+kubecub : Please fix your commit message to match kubecub coding standards
+kubecub : https://gist.github.com/cubxxw/126b72104ac0b0ca484c9db09c3e5694#file-githook-md
+❯ git commit -a -s -m "docs(main): README-en Chinese documentation"
+kubecub : Running local kubecub pre-commit hook.
+kubecub : Running the kubecub commit-msg hook.
+[main b3b339f] docs(main): README-en Chinese documentation
+ 1 file changed, 29 insertions(+)
+❯ git push origin main
+```
+
+</details>
+<details>
   <summary>Work with actions</summary>
 
 Actions provide handling of PR and issue.
