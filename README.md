@@ -37,7 +37,7 @@ I defined a spec template that I could use to quickly start building a full-fled
 In each directory, there is a README.md and an OWNERS, which explains what the directory does and who owns it.
 
 **Labels denger:**
-Read about the [go-project-layout](https://github.com/kubecub/go-project-layout/labels) tag design
+Read about the [go-project-layout](https://github.com/kubecub/go-project-layout/labels) tag design. We have provided in the [github-label-syncer](https://github.com/kubecub/github-label-syncer) warehouse label synchronizer.
 
 
 ## 🛫 Quick start 
