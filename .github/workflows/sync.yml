@@ -19,6 +19,7 @@ jobs:
       - name: Run GitHub File Sync
         uses: BetaHuhn/repo-file-sync-action@v1.21.0
         with:
+          GH_INSTALLATION_TOKEN: "${{ secrets.BOT_GITHUB_TOKEN }}"
           GH_PAT: ${{ secrets.BOT_GITHUB_TOKEN }}
           CONFIG_PATH: .github/sync.yml
           ORIGINAL_MESSAGE: true
@@ -27,10 +28,12 @@ jobs:
           COMMIT_BODY: "🤖 kubbot to synchronize the warehouse"
           GIT_EMAIL: "3293172751nss@gmail.com"
           GIT_USERNAME: "kubbot"
-          token: "${{ secrets.BOT_GITHUB_TOKEN }}"
+          PR_BODY: kubecub provides automated community services
           REVIEWERS: |
             cubxxw
             kubbot
           PR_LABELS: |
             file-sync
             automerge
+          ASSIGNEES: |
+            kubbot
