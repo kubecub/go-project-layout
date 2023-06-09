@@ -1,5 +1,5 @@
 # https://github.com/BetaHuhn/repo-file-sync-action
-/community:
+kubecub/community:
   - source: LICENSE
     dest: LICENSE 
   - source: .golangci.yml
