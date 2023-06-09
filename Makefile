@@ -198,6 +198,10 @@ go.build.multiarch: go.build.verify $(foreach p,$(PLATFORMS),$(addprefix go.buil
 tidy:
 	@$(GO) mod tidy
 
+## style: Code style -> fmt,vet,lint
+.PHONY: style
+style: fmt vet lint
+
 ## fmt: Run go fmt against code.
 .PHONY: fmt
 fmt:
@@ -218,11 +222,6 @@ generate:
 lint:
 	@echo "===========> Run golangci to lint source codes"
 	@golangci-lint run -c $(ROOT_DIR)/.golangci.yml $(ROOT_DIR)/...
-
-## style: Code style -> fmt,vet,lint
-.PHONY: style
-style: fmt vet lint
-
 
 ## test: Run unit test
 .PHONY: test
@@ -312,3 +311,107 @@ install.go-gitlint:
 .PHONY: install.go-junit-report
 install.go-junit-report:
 	@$(GO) install github.com/jstemmer/go-junit-report@latest
+
+# ==============================================================================
+# Tools that might be used include go gvm
+#
+
+## install.kube-score: Install kube-score, used to check kubernetes yaml files
+.PHONY: install.kube-score
+install.kube-score:
+	@$(GO) install github.com/zegl/kube-score/cmd/kube-score@latest
+
+## install.kubeconform: Install kubeconform, used to check kubernetes yaml files
+.PHONY: install.kubeconform
+install.kubeconform:
+	@$(GO) install github.com/yannh/kubeconform/cmd/kubeconform@latest
+
+## install.gsemver: Install gsemver, used to generate semver
+.PHONY: install.gsemver
+install.gsemver:
+	@$(GO) install github.com/arnaud-deprez/gsemver@latest
+
+## install.git-chglog: Install git-chglog, used to generate changelog
+.PHONY: install.git-chglog
+install.git-chglog:
+	@$(GO) install github.com/git-chglog/git-chglog/cmd/git-chglog@latest
+
+## install.github-release: Install github-release, used to create github release
+.PHONY: install.github-release
+install.github-release:
+	@$(GO) install github.com/github-release/github-release@latest
+
+## install.coscli: Install coscli, used to upload files to cos
+# example: ./coscli  cp -r  /home/off-line/docker-off-line/ cos://openim-1306374445/openim/openim/image/amd/off-line/off-line/ -e cos.ap-guangzhou.myqcloud.com
+# https://cloud.tencent.com/document/product/436/71763
+.PHONY: install.coscli
+install.coscli:
+	@wget -q https://github.com/tencentyun/coscli/releases/download/v0.13.0-beta/coscli-linux -O ${TOOLS_DIR}/coscli
+	@chmod +x ${TOOLS_DIR}/coscli
+
+## install.coscmd: Install coscmd, used to upload files to cos
+.PHONY: install.coscmd
+install.coscmd:
+	@if which pip &>/dev/null; then pip install coscmd; else pip3 install coscmd; fi
+
+## install.gvm: Install gvm, gvm is a Go version manager, built on top of the official go tool.
+.PHONY: install.gvm
+install.gvm:
+	@echo "===========> Installing gvm,The default installation path is ~/.gvm/script/gvm"
+	@bash < <(curl -s -S -L https://raw.gitee.com/moovweb/gvm/master/binscripts/gvm-installer)
+	@$(shell source /root/.gvm/script/gvm)
+
+## install.golines: Install golines, used to format long lines
+.PHONY: install.golines
+install.golines:
+	@$(GO) install github.com/segmentio/golines@latest
+
+## install.go-mod-outdated: Install go-mod-outdated, used to check outdated dependencies
+.PHONY: install.go-mod-outdated
+install.go-mod-outdated:
+	@$(GO) install github.com/psampaz/go-mod-outdated@latest
+
+## install.mockgen: Install mockgen, used to generate mock functions
+.PHONY: install.mockgen
+install.mockgen:
+	@$(GO) install github.com/golang/mock/mockgen@latest
+
+## install.gotests: Install gotests, used to generate test functions
+.PHONY: install.gotests
+install.gotests:
+	@$(GO) install github.com/cweill/gotests/gotests@latest
+
+## install.protoc-gen-go: Install protoc-gen-go, used to generate go source files from protobuf files
+.PHONY: install.protoc-gen-go
+install.protoc-gen-go:
+	@$(GO) install github.com/golang/protobuf/protoc-gen-go@latest
+
+## install.cfssl: Install cfssl, used to generate certificates
+.PHONY: install.cfssl
+install.cfssl:
+	@$(ROOT_DIR)/script/install/install.sh iam::install::install_cfssl
+
+## install.depth: Install depth, used to check dependency tree
+.PHONY: install.depth
+install.depth:
+	@$(GO) install github.com/KyleBanks/depth/cmd/depth@latest
+
+## install.go-callvis: Install go-callvis, used to visualize call graph
+.PHONY: install.go-callvis
+install.go-callvis:
+	@$(GO) install github.com/ofabry/go-callvis@latest
+
+## install.gothanks: Install gothanks, used to thank go dependencies
+.PHONY: install.gothanks
+install.gothanks:
+	@$(GO) install github.com/psampaz/gothanks@latest
+
+## install.richgo: Install richgo
+.PHONY: install.richgo
+install.richgo:
+	@$(GO) install github.com/kyoh86/richgo@latest
+
+## install.rts: Install rts
+.PHONY: install.rts
+install.rts:
+	@$(GO) install github.com/galeone/rts/cmd/rts@latest
