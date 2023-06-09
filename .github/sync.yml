@@ -23,6 +23,7 @@ group:
   files: 
     - source: .gitingore
       dest: .gitingore
+      replace: false
     - source: LICENSE
       dest: LICENSE
       replace: false
