@@ -20,7 +20,6 @@ jobs:
         uses: BetaHuhn/repo-file-sync-action@v1.21.0
         with:
           GH_INSTALLATION_TOKEN: "${{ secrets.BOT_GITHUB_TOKEN }}"
-          GH_PAT: ${{ secrets.BOT_GITHUB_TOKEN }}
           CONFIG_PATH: .github/sync.yml
           ORIGINAL_MESSAGE: true
           SKIP_PR: true
