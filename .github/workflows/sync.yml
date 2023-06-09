@@ -24,8 +24,10 @@ jobs:
           ORIGINAL_MESSAGE: true
           SKIP_PR: true
           COMMIT_EACH_FILE: false
+          COMMIT_BODY: "🤖 kubbot to synchronize the warehouse"
           GIT_EMAIL: "3293172751nss@gmail.com"
           GIT_USERNAME: "kubbot"
+          token: "${{ secrets.BOT_GITHUB_TOKEN }}"
           REVIEWERS: |
             cubxxw
             kubbot

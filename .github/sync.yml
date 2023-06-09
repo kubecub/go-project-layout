@@ -18,6 +18,7 @@ group:
     kubecub/CloudBuildAI
     kubecub/log
     kubecub/automation
+    kubecub/kubecub
 
   files: 
     - source: .gitingore
