@@ -1,0 +1,37 @@
+# https://github.com/BetaHuhn/repo-file-sync-action
+kubecub/.github:
+  - source: LICENSE
+    dest: LICENSE 
+  - source: workflows/
+    dest: .github/workflows/
+    replace: false
+    exclude: |
+      e2e-test.yml
+      sync.yml
+
+group:
+  repos: |
+    kubecub/github-label-syncer
+    kubecub/community
+    kubecub/RemoteOps-scripts
+    kubecub/kube-im
+    kubecub/CloudBuildAI
+    kubecub/log
+    kubecub/automation
+
+  files: 
+    - source: .gitingore
+      dest: .gitingore
+    - source: LICENSE
+      dest: LICENSE
+      replace: false
+    - source: .github/sync_docs.yml
+      dest: .github/sync_docs.yml
+    - source: workflows/
+      dest: .github/workflows/
+      exclude: |
+        e2e-test.yml
+        sync.yml
+    - source: scripts/githooks/
+      dest: scripts/githooks/
+      replace: true
