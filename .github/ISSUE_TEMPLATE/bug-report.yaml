@@ -1,12 +1,14 @@
-name: Bug Report
+name: 🐛 Bug Report
 description: Report a bug encountered while operating kubecub
-title: "Bug: "
+title: "Bug: <describe the error>"
 labels: ["kind/bug"]
 body:
   - type: textarea
     id: problem
     attributes:
       label: What happened?
+      value:
+        <!-- ⚠️ Please ask questions in English. Thank you -->
       description: |
         Please provide as much info as possible. Not doing so may result in your bug not being addressed in a timely manner.
     validations:

@@ -19,7 +19,7 @@ body:
       options:
         - label: I've searched for similar issues and couldn't find anything matching
           required: true
-        - label: I've discussed this feature request in the [kubecub Slack](https://join.slack.com/t/kubecub/shared_invite/zt-1tmoj26uf-_FDy3dowVHBiGvLk9e5Xkg) and got positive feedback
+        - label: I've discussed this feature request in the [kubecub Slack](https://join.slack.com/t/kubecub/shared_invite/zt-1se0k2bae-lkYzz0_T~BYh3rjkvlcUqQ) and got positive feedback
           required: true
 
   - type: dropdown

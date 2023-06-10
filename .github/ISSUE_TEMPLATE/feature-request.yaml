@@ -1,14 +1,16 @@
-name: Feature Request
+name: ✨ Feature Request
 description: Suggest and idea for this project
-title: "[Feature]: <Feature Request Title>"
-labels: ["type:feature"]
+title: "Feature: <Feature Request Title>"
+labels: ["kind/feature"]
 assignees:
   - kubecub/maintainers
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for initiating this feature request !🤗
+        Thank you for initiating this feature request !🤗 
+        Expected contribution?   📖 Read our [contributor documentation](https://github.com/kubecub/Open-IM-Server/blob/main/CONTRIBUTING.md) 
+  
   - type: checkboxes
     id: checklist
     attributes:
@@ -17,7 +19,7 @@ body:
       options:
         - label: I've searched for similar issues and couldn't find anything matching
           required: true
-        - label: I've discussed this feature request in the [kubecub Slack](https://join.slack.com/t/c-ub/shared_invite/zt-1se0k2bae-lkYzz0_T~BYh3rjkvlcUqQ) and got positive feedback
+        - label: I've discussed this feature request in the [kubecub Slack](https://join.slack.com/t/kubecub/shared_invite/zt-1se0k2bae-lkYzz0_T~BYh3rjkvlcUqQ) and got positive feedback
           required: true
 
   - type: dropdown
@@ -25,12 +27,14 @@ body:
     attributes:
       label: Is this feature request related to a problem?
       options:
-        - "Yes"
-        - "No"
+        - "✅ Yes"
+        - "❎ No"
   - type: textarea
     id: problem_description
     attributes:
       label: Problem Description
+      value: 
+        <!-- ⚠️ Please ask questions in English. Thank you -->  
       description: If yes, please provide a clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
     validations:
       required: false

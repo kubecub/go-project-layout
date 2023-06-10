@@ -1,12 +1,14 @@
-name: Failing Test
+name: 🚨 Failing Test
 description: Report continuously failing tests or jobs in kubecub CI
-title: "🤖Failing test: "
-labels: kind/failing-test
+title: "🤖Failing-test: "
+labels: ["kind/failing-test"]
 body:
   - type: textarea
     id: jobs
     attributes:
       label: Which job are failing?
+      value: 
+        <!-- ⚠️ Please ask questions in English. Thank you -->
       placeholder: |
         Please only use this template for submitting reports about continuously failing tests or jobs in kubecub CI.
     validations:

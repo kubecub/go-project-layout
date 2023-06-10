@@ -289,7 +289,7 @@ git() {
 The documentation for go-project-layout includes:
 
 + [README.md](https://github.com/kubecub/go-project-layout/blob/main/README.md): This file includes the basic information and instructions for getting started with go-project-layout.
-+ [README_zh-CN.md](https://github.com/kubecub/go-project-layout/blob/main/README_zh-CN.md): This file includes the basic information and instructions for getting started with OpenIM in Chinese.
++ [README_zh-CN.md](https://github.com/kubecub/go-project-layout/blob/main/README_zh-CN.md): This file includes the basic information and instructions for getting started with kubecub in Chinese.
 + [CONTRIBUTING.md](https://github.com/kubecub/go-project-layout/blob/main/CONTRIBUTING.md): This file contains guidelines for contributing to go-project-layout's codebase, such as how to submit issues, pull requests, and code reviews.
 + [Official Documentation](https://nsddd.top): This is the official documentation for go-project-layout, which includes comprehensive information on all of its features, configuration options, and troubleshooting tips.
 

@@ -1,7 +1,7 @@
 repository:
   name: "kubecub"
   description: "kubecub instant messaging"
-  homepage_url: "https://www.kubecub.online"
+  homepage_url: "https://kubecub.nsddd.top"
   topics: kubecub, kubernetes, chat, chatgpt
 
   default_branch: main
