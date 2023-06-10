@@ -1,0 +1,31 @@
+name: 📚 Documentation issue
+description: Found an issue in the documentation? You can use this one!
+title: "Docs: <description>"
+labels: ["kind/documentation"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A brief description of the question or issue, also include what you tried and what didn't work
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Please add screenshots if applicable
+    validations:
+      required: false
+  - type: textarea
+    id: extrainfo
+    attributes:
+      label: Additional information
+      description: Is there anything else we should know about this issue?
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        You can also join our Slack community [here](https://join.slack.com/t/kubecub/shared_invite/zt-1tmoj26uf-_FDy3dowVHBiGvLk9e5Xkg)
+        Feel free to check out other cool repositories of the kubecub Community [here](https://github.com/kubecub)

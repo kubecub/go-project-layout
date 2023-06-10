@@ -1,37 +1,73 @@
 # https://github.com/BetaHuhn/repo-file-sync-action
+
+# Synchronization for the.github repository
 kubecub/.github:
   - source: LICENSE
     dest: LICENSE 
-  - source: workflows/
-    dest: .github/workflows/
-    replace: false
+  - source: .github/
+    dest: .github/
+    replace: true
     exclude: |
-      e2e-test.yml
+      workflows/e2e-test.yml
+      workflows/sync.yml
+      workflows/sync.yml
       sync.yml
 
 group:
-  repos: |
-    kubecub/github-label-syncer
-    kubecub/community
-    kubecub/RemoteOps-scripts
-    kubecub/kube-im
-    kubecub/CloudBuildAI
-    kubecub/log
-    kubecub/automation
-    kubecub/kubecub
+  # first group：common to all warehouses
+  - repos: |
+      # TODO: add the required warehouse here
+      kubecub/github-label-syncer@main
+      kubecub/community@main
+      kubecub/RemoteOps-scripts@main
+      kubecub/kube-im@main
+      kubecub/CloudBuildAI@main
+      kubecub/log@main
+      kubecub/automation@main
+      kubecub/kubecub@main
+      kubecub/feishu-sheet-parser@main
+      kubecub/docs@main
+    files: 
+      # - source: .gitingore
+      #   dest: .gitingore
+      #   replace: false
+      - source: LICENSE
+        dest: LICENSE
+        replace: false
+      - source: .github/workflows/
+        dest: .github/workflows/
+        exclude: |
+          e2e-test.yml
+          sync.yml
+      - source: scripts/githooks/
+        dest: scripts/githooks/
+        replace: true
+      - source: scripts/LICENSE_TEMPLATES
+        dest: scripts/LICENSE_TEMPLATES
+        replace: true
+      - source: scripts/license_templates.txt
+        dest: scripts/license_templates.txt
+        replace: true
 
-  files: 
-    # - source: .gitingore
-    #   dest: .gitingore
-    #   replace: false
-    - source: LICENSE
-      dest: LICENSE
-      replace: false
-    - source: .github/workflows/
-      dest: .github/workflows/
-      exclude: |
-        e2e-test.yml
-        sync.yml
-    - source: scripts/githooks/
-      dest: scripts/githooks/
-      replace: true
+  # second group：omplex layered architecture, common to go language projects
+  - repos: |
+      # TODO: add the required warehouse here
+      kubecub/github-label-syncer
+      kubecub/kube-im
+      kubecub/automation
+      kubecub/kubecub
+    files: 
+      # - source: .gitingore
+      #   dest: .gitingore
+      #   replace: false
+      - source: LICENSE
+        dest: LICENSE
+        replace: false
+      - source: .github/workflows/
+        dest: .github/workflows/
+        exclude: |
+          e2e-test.yml
+          sync.yml
+      - source: scripts/githooks/
+        dest: scripts/githooks/
+        replace: true
