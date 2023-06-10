@@ -261,6 +261,7 @@ help: Makefile
 	@sed -n 's/^##//p' $< | awk -F':' '{printf "\033[36m%-28s\033[0m %s\n", $$1, $$2}' | sed -e 's/^/ /'
 ################################################################################
 # tools
+
 BUILD_TOOLS ?= go-gitlint golangci-lint goimports addlicense deepcopy-gen conversion-gen ginkgo go-junit-report 
 
 # tools.verify.%: Check if a tool is installed and install it
@@ -313,7 +314,7 @@ install.go-junit-report:
 	@$(GO) install github.com/jstemmer/go-junit-report@latest
 
 # ==============================================================================
-# Tools that might be used include go gvm
+# Tools that might be used include go gvm, cos
 #
 
 ## install.kube-score: Install kube-score, used to check kubernetes yaml files
