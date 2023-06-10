@@ -39,7 +39,7 @@ Actually in kubecub, we take two rules serious when committing:
 
 Commit message could help reviewers better understand what the purpose of submitted PR is. It could help accelerate the code review procedure as well. We encourage contributors to use **EXPLICIT** commit message rather than ambiguous message. In general, we advocate the following commit message type:
 
-We use [Semantic Commits](https://www.conventionalcommits.org/en/v1.0.0/) to make it easier to understand what a commit does and to build pretty changekubecubs. Please use the following prefixes for your commits:
+We use [Semantic Commits](https://www.conventionalcommits.org/en/v1.0.0/) to make it easier to understand what a commit does and to build pretty change kubecub. Please use the following prefixes for your commits:
 
 + `docs: xxxx`. For example, "docs: add docs about storage installation".
 + `feature: xxxx`.For example, "feature: make result show in sorted order".
@@ -76,9 +76,9 @@ An example for this could be:
 
 #### PR Description
 
-PR is the only way to make change to kubecub project files. To help reviewers better get your purpose, PR description could not be too detailed. We encourage contributors to follow the [PR template](https://github.com/kubecub/kubecub/tree/main/.github/PULL_REQUEST_TEMPLATE.md) to finish the pull request.
+PR is the only way to make change to kubecub project files. To help reviewers better get your purpose, PR description could not be too detailed. We encourage contributors to follow the [PR template](https://github.com/kubecub) to finish the pull request.
 
-You can find some very formal PR in [RFC](https://github.com/kubecub/kubecub/issues?q=is%3Aissue+is%3Aopen+RFC+label%3ARFC) issues and learn about them.
+You can find some very formal PR in [RFC](https://github.com/kubecub/kubecub/issues) issues and learn about them.
 
 **📖 Opening PRs:**
 
@@ -126,9 +126,9 @@ git() {
 
 The documentation for kubecub includes:
 
-+ [README.md](https://github.com/kubecub/kubecub/blob/main/README.md): This file includes the basic information and instructions for getting started with kubecub.
-+ [CONTRIBUTING.md](https://github.com/kubecub/kubecub/blob/main/CONTRIBUTING.md): This file contains guidelines for contributing to kubecub's codebase, such as how to submit issues, pull requests, and code reviews.
-+ [DEVELOPGUIDE.md](https://github.com/kubecub/kubecub/blob/main/DEVELOPGUIDE.md): This file provides a more in-depth guide to developing kubecub, including information on the project's architecture, coding conventions, and testing practices.
++ [README.md](https://github.com/kubecub/community/blob/main/README.md): This file includes the basic information and instructions for getting started with kubecub.
++ [CONTRIBUTING.md](https://github.com/kubecub/community/blob/main/CONTRIBUTING.md): This file contains guidelines for contributing to kubecub's codebase, such as how to submit issues, pull requests, and code reviews.
++ [DEVELOPGUIDE.md](https://github.com/kubecub/community/blob/main/DEVELOPGUIDE.md): This file provides a more in-depth guide to developing kubecub, including information on the project's architecture, coding conventions, and testing practices.
 + [Official Documentation](nsddd.top): This is the official documentation for kubecub, which includes comprehensive information on all of its features, configuration options, and troubleshooting tips.
 
 Please obey the following rules to better format the docs, which would greatly improve the reading experience.
@@ -144,12 +144,12 @@ Please obey the following rules to better format the docs, which would greatly i
 
 We choose GitHub as the primary place for kubecub to collaborate. So the latest updates of kubecub are always here. Although contributions via PR is an explicit way to help, we still call for any other ways.
 
-+ reply to other's [issues](https://github.com/kubecub/kubecub/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) if you could;
++ reply to other's [issues](https://github.com/search?q=org%3Akubecub++&type=issues&s=comments&o=desc) if you could;
 + help solve other user's problems;
-+ help review other's [PR](https://github.com/kubecub/kubecub/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc) design; 
++ help review other's [PR](https://github.com/search?q=org%3Akubecub++&type=pullrequests&s=comments&o=desc) design; 
 + discuss about kubecub to make things clearer;
 + advocate [kubecub](google.com/search?q=kubecub) technokubecuby beyond GitHub;
-+ write bkubecubs on kubecub and so on.
++ write kubecubs on kubecub and so on.
 
 In a word, **ANY HELP IS CONTRIBUTION.**
 
@@ -164,7 +164,7 @@ Releases of kubecub are done using [Release Please](https://github.com/googleapi
 
 🎯 Merging the 'release please' PR to `main`:
 
-+ Release please is triggered, creates a new release and updates the changekubecub based on the commit messages
++ Release please is triggered, creates a new release and updates the change kubecub based on the commit messages
 + GoReleaser is triggered, builds the binaries and attaches them to the release
 + Containers are created and pushed to the container registry
 

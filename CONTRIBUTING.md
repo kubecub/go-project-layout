@@ -8,13 +8,23 @@ This document provides guidelines and best practices to help you contribute effe
 
 ## 📇Topics
 
-- [What we expect of you](#What-we-expect-of-you)
-- [Code of Conduct](#Code-of-Conduct)
-- [Getting Started](#Getting-Started)
-- [Style and Specification](#Style-and-Specification)
-- [Engage to help anything](#Engage-to-help-anything)
-- [Release version](#Release-version)
-- [Contact Us](#Contact-Us)
+- [Contributing to go-project-layout](#contributing-to-go-project-layout)
+  - [📇Topics](#topics)
+  - [What we expect of you](#what-we-expect-of-you)
+  - [Code of ConductCode of Conduct](#code-of-conductcode-of-conduct)
+      - [Code and doc contribution](#code-and-doc-contribution)
+      - [Where should I start?](#where-should-i-start)
+      - [Design documents](#design-documents)
+  - [Getting Started](#getting-started)
+  - [Style and Specification](#style-and-specification)
+      - [Reporting security issues](#reporting-security-issues)
+      - [Reporting general issues](#reporting-general-issues)
+      - [Commit Rules](#commit-rules)
+      - [PR Description](#pr-description)
+      - [Docs Contribution](#docs-contribution)
+  - [Engage to help anything](#engage-to-help-anything)
+  - [Release version](#release-version)
+  - [Contact Us](#contact-us)
 
 ## What we expect of you
 
