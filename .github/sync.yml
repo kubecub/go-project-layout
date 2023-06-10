@@ -11,41 +11,41 @@ kubecub/.github:
       workflows/
       sync.yml
 
-# group:
-#   # first group：common to all warehouses
-#   - repos: |
-#       # TODO: add the required warehouse here
-#       kubecub/github-label-syncer@main
-#       kubecub/community@main
-#       kubecub/RemoteOps-scripts@main
-#       kubecub/kube-im@main
-#       kubecub/CloudBuildAI@main
-#       kubecub/log@main
-#       kubecub/automation@main
-#       kubecub/kubecub@main
-#       kubecub/feishu-sheet-parser@main
-#       kubecub/docs@main
-#     files: 
-#       # - source: .gitingore
-#       #   dest: .gitingore
-#       #   replace: false
-#       - source: LICENSE
-#         dest: LICENSE
-#         replace: false
-#       - source: .github/workflows/
-#         dest: .github/workflows/
-#         exclude: |
-#           e2e-test.yml
-#           sync.yml
-#       - source: scripts/githooks/
-#         dest: scripts/githooks/
-#         replace: true
-#       - source: scripts/LICENSE_TEMPLATES
-#         dest: scripts/LICENSE_TEMPLATES
-#         replace: true
-#       - source: scripts/license_templates.txt
-#         dest: scripts/license_templates.txt
-#         replace: true
+group:
+  # first group：common to all warehouses
+  - repos: |
+      # TODO: add the required warehouse here
+      kubecub/github-label-syncer
+      kubecub/community
+      kubecub/RemoteOps-scripts
+      kubecub/kube-im
+      kubecub/CloudBuildAI
+      kubecub/log
+      kubecub/automation
+      kubecub/kubecub
+      kubecub/feishu-sheet-parser
+      kubecub/docs
+    files: 
+      # - source: .gitingore
+      #   dest: .gitingore
+      #   replace: false
+      - source: LICENSE
+        dest: LICENSE
+        replace: false
+      - source: .github/workflows/
+        dest: .github/workflows/
+        exclude: |
+          e2e-test.yml
+          sync.yml
+      - source: scripts/githooks/
+        dest: scripts/githooks/
+        replace: true
+      - source: scripts/LICENSE_TEMPLATES
+        dest: scripts/LICENSE_TEMPLATES
+        replace: true
+      - source: scripts/license_templates.txt
+        dest: scripts/license_templates.txt
+        replace: true
 
   # # second group：omplex layered architecture, common to go language projects
   # - repos: |
