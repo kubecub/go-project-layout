@@ -8,6 +8,9 @@
 kubecub/.github:
   - source: LICENSE
     dest: LICENSE 
+  - source: scripts/LICENSE/
+    dest: scripts/LICENSE/
+    replace: true
   - source: .github/
     dest: .github/
     replace: true
