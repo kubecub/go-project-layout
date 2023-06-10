@@ -14,7 +14,6 @@ kubecub/.github:
 group:
   # first group：common to all warehouses
   - repos: |
-      # TODO: add the required warehouse here
       kubecub/github-label-syncer
       kubecub/community
       kubecub/RemoteOps-scripts
@@ -23,8 +22,7 @@ group:
       kubecub/log
       kubecub/automation
       kubecub/kubecub
-      kubecub/feishu-sheet-parser
-      kubecub/docs
+
     files: 
       # - source: .gitingore
       #   dest: .gitingore
