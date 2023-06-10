@@ -13,6 +13,7 @@ kubecub/.github:
 
 group:
   # first group：common to all warehouses
+  # TODO: add the required warehouse here
   - repos: |
       kubecub/github-label-syncer
       kubecub/community
@@ -22,7 +23,8 @@ group:
       kubecub/log
       kubecub/automation
       kubecub/kubecub
-
+      kubecub/feishu-sheet-parser
+      kubecub/docs
     files: 
       # - source: .gitingore
       #   dest: .gitingore
@@ -46,8 +48,8 @@ group:
         replace: true
 
   # # second group：omplex layered architecture, common to go language projects
+  # TODO: add the required warehouse here
   # - repos: |
-  #     # TODO: add the required warehouse here
   #     kubecub/github-label-syncer
   #     kubecub/kube-im
   #     kubecub/automation
