@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2023 kubecub open source community(public welfare community)
+Copyright (c) 2023 kubecub open source community
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

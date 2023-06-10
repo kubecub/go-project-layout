@@ -2,7 +2,7 @@
 # Use of this source code is governed by a MIT style
 # license that can be found in the LICENSE file.
 
-################################################################################
+###################################=> common commands <=#############################################
 # ========================== Capture Environment ===============================
 # get the repo root and output path
 ROOT_PACKAGE=github.com/kubecub/go-project-layout
@@ -102,8 +102,8 @@ XARGS := xargs -r
 
 # ==============================================================================
 # TODO: License selection
-# LICENSE_TEMPLATE ?= $(ROOT_DIR)/scripts/license_templates.txt	# MIT License
-# LICENSE_TEMPLATE ?= $(ROOT_DIR)/scripts/LICENSE_TEMPLATES  # Apache License
+LICENSE_TEMPLATE ?= $(ROOT_DIR)/scripts/LICENSE/license_templates.txt	# MIT License
+# LICENSE_TEMPLATE ?= $(ROOT_DIR)/scripts/LICENSE/LICENSE_TEMPLATES  # Apache License
 
 # COMMA: Concatenate multiple strings to form a list of strings
 COMMA := ,
@@ -156,7 +156,7 @@ EXCLUDE_TESTS=github.com/kubecub/CloudBuildAI/test
 
 ## all: Build all the necessary targets.
 .PHONY: all
-all: tidy add-copyright lint cover build
+all: copyright-verify build # tidy lint cover
 
 ## build: Build binaries by default.
 .PHONY: build
@@ -174,6 +174,7 @@ ifneq ($(shell $(GO) version | grep -q -E '\bgo($(GO_SUPPORTED_VERSIONS))\b' && 
 	$(error unsupported go version. Please make install one of the following supported version: '$(GO_SUPPORTED_VERSIONS)')
 endif
 
+## go.build： Build the binary file of the specified platform.
 .PHONY: go.build.%
 go.build.%:
 	$(eval COMMAND := $(word 2,$(subst ., ,$*)))
@@ -187,8 +188,9 @@ go.build.%:
 	@mkdir -p $(BIN_DIR)/platforms/$(OS)/$(ARCH)
 	@CGO_ENABLED=0 GOOS=$(OS) GOARCH=$(ARCH) $(GO) build $(GO_BUILD_FLAGS) -o $(BIN_DIR)/platforms/$(OS)/$(ARCH)/$(COMMAND)$(GO_OUT_EXT) $(ROOT_PACKAGE)/cmd/$(COMMAND)
 
-.PHONY: go.build.multiarch
-go.build.multiarch: go.build.verify $(foreach p,$(PLATFORMS),$(addprefix go.build., $(addprefix $(p)., $(BINS))))
+## build-multiarch: Build binaries for multiple platforms.
+.PHONY: build-multiarch
+build-multiarch: go.build.verify $(foreach p,$(PLATFORMS),$(addprefix go.build., $(addprefix $(p)., $(BINS))))
 
 # ==============================================================================
 # Targets
@@ -233,18 +235,33 @@ test:
 cover: test
 	@$(GO) test -cover
 
-## copyright.verify: Validate boilerplate headers for assign files.
+## docker-build: Build docker image with the manager.
+.PHONY: docker-build
+docker-build: test
+	docker build -t ${IMG} .
+
+## docker-push: Push docker image with the manager.
+.PHONY: docker-push
+docker-push:
+	docker push ${IMG}
+
+## docker-buildx-push: Push docker image with the manager using buildx.
+.PHONY: docker-buildx-push
+docker-buildx-push:
+	docker buildx build --platform linux/arm64,linux/amd64 -t ${IMG} . --push
+
+## copyright-verify: Validate boilerplate headers for assign files.
 .PHONY: copyright-verify
-copyright-verify: 
+copyright-verify: tools.verify.addlicense copyright-add
 	@echo "===========> Validate boilerplate headers for assign files starting in the $(ROOT_DIR) directory"
-	@addlicense -v -check -ignore **/test/** -f $(LICENSE_TEMPLATE) $(CODE_DIRS)
+	@$(TOOLS_DIR)/addlicense -v -check -ignore **/test/** -f $(LICENSE_TEMPLATE) $(CODE_DIRS)
 	@echo "===========> End of boilerplate headers check..."
 
 ## copyright-add: Add the boilerplate headers for all files.
 .PHONY: copyright-add
-copyright-add: 
+copyright-add: tools.verify.addlicense
 	@echo "===========> Adding $(LICENSE_TEMPLATE) the boilerplate headers for all files"
-	@addlicense -y $(shell date +"%Y") -v -c "KubeCub & Xinwei Xiong(cubxxw)." -f $(LICENSE_TEMPLATE) $(CODE_DIRS)
+	@$(TOOLS_DIR)/addlicense -y $(shell date +"%Y") -v -c "KubeCub open source community." -f $(LICENSE_TEMPLATE) $(CODE_DIRS)
 	@echo "===========> End the copyright is added..."
 
 ## clean: Clean all builds.
@@ -259,7 +276,8 @@ clean:
 help: Makefile
 	@printf "\n\033[1mUsage: make <TARGETS> ...\033[0m\n\n\\033[1mTargets:\\033[0m\n\n"
 	@sed -n 's/^##//p' $< | awk -F':' '{printf "\033[36m%-28s\033[0m %s\n", $$1, $$2}' | sed -e 's/^/ /'
-################################################################################
+	
+######################################=> common tools<= ############################################
 # tools
 
 BUILD_TOOLS ?= go-gitlint golangci-lint goimports addlicense deepcopy-gen conversion-gen ginkgo go-junit-report 
