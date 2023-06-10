@@ -44,11 +44,8 @@ group:
       - source: scripts/githooks/
         dest: scripts/githooks/
         replace: true
-      - source: scripts/LICENSE_TEMPLATES
-        dest: scripts/LICENSE_TEMPLATES
-        replace: true
-      - source: scripts/license_templates.txt
-        dest: scripts/license_templates.txt
+      - source: scripts/LICENSE/
+        dest: scripts/LICENSE/
         replace: true
 
   # # second group：omplex layered architecture, common to go language projects
