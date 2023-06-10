@@ -49,25 +49,25 @@ group:
         dest: scripts/license_templates.txt
         replace: true
 
-  # second group：omplex layered architecture, common to go language projects
-  - repos: |
-      # TODO: add the required warehouse here
-      kubecub/github-label-syncer
-      kubecub/kube-im
-      kubecub/automation
-      kubecub/kubecub
-    files: 
-      # - source: .gitingore
-      #   dest: .gitingore
-      #   replace: false
-      - source: LICENSE
-        dest: LICENSE
-        replace: false
-      - source: .github/workflows/
-        dest: .github/workflows/
-        exclude: |
-          e2e-test.yml
-          sync.yml
-      - source: scripts/githooks/
-        dest: scripts/githooks/
-        replace: true
+  # # second group：omplex layered architecture, common to go language projects
+  # - repos: |
+  #     # TODO: add the required warehouse here
+  #     kubecub/github-label-syncer
+  #     kubecub/kube-im
+  #     kubecub/automation
+  #     kubecub/kubecub
+  #   files: 
+  #     # - source: .gitingore
+  #     #   dest: .gitingore
+  #     #   replace: false
+  #     - source: LICENSE
+  #       dest: LICENSE
+  #       replace: false
+  #     - source: .github/workflows/
+  #       dest: .github/workflows/
+  #       exclude: |
+  #         e2e-test.yml
+  #         sync.yml
+  #     - source: scripts/githooks/
+  #       dest: scripts/githooks/
+  #       replace: true
