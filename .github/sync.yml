@@ -8,9 +8,7 @@ kubecub/.github:
     dest: .github/
     replace: true
     exclude: |
-      workflows/e2e-test.yml
-      workflows/sync.yml
-      workflows/sync.yml
+      workflows/
       sync.yml
 
 group:
