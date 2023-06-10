@@ -26,12 +26,12 @@ jobs:
           SKIP_PR: true
           COMMIT_EACH_FILE: false
           COMMIT_BODY: "🤖 kubbot to synchronize the warehouse"
-          GIT_EMAIL: "3293172751nss@gmail.com"
+          GIT_EMAIL: "3293172751ysy@gmail.com"
           GIT_USERNAME: "kubbot"
           PR_BODY: 👌 kubecub provides automated community services
           REVIEWERS: |
-            cubxxw
             kubbot
+            cubxxw
           PR_LABELS: |
             file-sync
             automerge
