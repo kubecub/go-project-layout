@@ -1,51 +1,51 @@
 # https://github.com/BetaHuhn/repo-file-sync-action
 
 # Synchronization for the.github repository
-# kubecub/.github:
-#   - source: LICENSE
-#     dest: LICENSE 
-#   - source: .github/
-#     dest: .github/
-#     replace: true
-#     exclude: |
-#       workflows/
-#       sync.yml
+kubecub/.github:
+  - source: LICENSE
+    dest: LICENSE 
+  - source: .github/
+    dest: .github/
+    replace: true
+    exclude: |
+      workflows/
+      sync.yml
 
-group:
-  # first group：common to all warehouses
-  - repos: |
-      # TODO: add the required warehouse here
-      kubecub/github-label-syncer@main
-      kubecub/community@main
-      kubecub/RemoteOps-scripts@main
-      kubecub/kube-im@main
-      kubecub/CloudBuildAI@main
-      kubecub/log@main
-      kubecub/automation@main
-      kubecub/kubecub@main
-      kubecub/feishu-sheet-parser@main
-      kubecub/docs@main
-    files: 
-      # - source: .gitingore
-      #   dest: .gitingore
-      #   replace: false
-      - source: LICENSE
-        dest: LICENSE
-        replace: false
-      - source: .github/workflows/
-        dest: .github/workflows/
-        exclude: |
-          e2e-test.yml
-          sync.yml
-      - source: scripts/githooks/
-        dest: scripts/githooks/
-        replace: true
-      - source: scripts/LICENSE_TEMPLATES
-        dest: scripts/LICENSE_TEMPLATES
-        replace: true
-      - source: scripts/license_templates.txt
-        dest: scripts/license_templates.txt
-        replace: true
+# group:
+#   # first group：common to all warehouses
+#   - repos: |
+#       # TODO: add the required warehouse here
+#       kubecub/github-label-syncer@main
+#       kubecub/community@main
+#       kubecub/RemoteOps-scripts@main
+#       kubecub/kube-im@main
+#       kubecub/CloudBuildAI@main
+#       kubecub/log@main
+#       kubecub/automation@main
+#       kubecub/kubecub@main
+#       kubecub/feishu-sheet-parser@main
+#       kubecub/docs@main
+#     files: 
+#       # - source: .gitingore
+#       #   dest: .gitingore
+#       #   replace: false
+#       - source: LICENSE
+#         dest: LICENSE
+#         replace: false
+#       - source: .github/workflows/
+#         dest: .github/workflows/
+#         exclude: |
+#           e2e-test.yml
+#           sync.yml
+#       - source: scripts/githooks/
+#         dest: scripts/githooks/
+#         replace: true
+#       - source: scripts/LICENSE_TEMPLATES
+#         dest: scripts/LICENSE_TEMPLATES
+#         replace: true
+#       - source: scripts/license_templates.txt
+#         dest: scripts/license_templates.txt
+#         replace: true
 
   # # second group：omplex layered architecture, common to go language projects
   # - repos: |
