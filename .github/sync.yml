@@ -1,15 +1,15 @@
 # https://github.com/BetaHuhn/repo-file-sync-action
 
 # Synchronization for the.github repository
-kubecub/.github:
-  - source: LICENSE
-    dest: LICENSE 
-  - source: .github/
-    dest: .github/
-    replace: true
-    exclude: |
-      workflows/
-      sync.yml
+# kubecub/.github:
+#   - source: LICENSE
+#     dest: LICENSE 
+#   - source: .github/
+#     dest: .github/
+#     replace: true
+#     exclude: |
+#       workflows/
+#       sync.yml
 
 group:
   # first group：common to all warehouses
