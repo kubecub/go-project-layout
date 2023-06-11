@@ -62,10 +62,10 @@ group:
           sync.yml
       - source: scripts/githooks/
         dest: scripts/githooks/
-        replace: true
+        replace: false
       - source: scripts/LICENSE/
         dest: scripts/LICENSE/
-        replace: true
+        replace: false
 
   # # second group：omplex layered architecture, common to go language projects
   # TODO: add the required warehouse here
