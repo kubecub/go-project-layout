@@ -18,12 +18,28 @@ kubecub/.github:
       workflows/
       sync.yml
 
+kubecub/community:
+  - source: LICENSE
+    dest: LICENSE 
+  - source: scripts/LICENSE/
+    dest: scripts/LICENSE/
+    replace: true
+  - source: .github/workflows/
+    dest: .github/workflows/
+    exclude:
+      - e2e-test.yml
+      - sync.yml
+  - source: .github/
+    dest: .github/
+    replace: true
+    exclude: |
+      sync.yml
+
 group:
   # first group：common to all warehouses
   # TODO: add the required warehouse here
   - repos: |
       kubecub/github-label-syncer
-      kubecub/community
       kubecub/RemoteOps-scripts
       kubecub/kube-im
       kubecub/CloudBuildAI
