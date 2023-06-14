@@ -27,7 +27,7 @@ jobs:
         env:
           # set openAI api key in repo actions secrets,
           # for openAI keys go to: https://platform.openai.com/account/api-keys
-          # for repo secret go to: https://github.com/organizations/kubecub/settings/secrets/actions
+          # for repo secret go to: https://github.com/kuebcub/settings/secrets/actions
           OCO_OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
           # customization
