@@ -14,6 +14,7 @@ jobs:
         uses: peter-evans/create-or-update-comment@v3
         with:
           issue-number: ${{ github.event.issue.number }}
+          token: ${{ secrets.BOT_GITHUB_TOKEN }}
           body: |
             This issue is available for anyone to work on. **Make sure to reference this issue in your pull request.** :sparkles: Thank you for your contribution! :sparkles:
             If you wish to accept this assignment, please leave a comment in the comments section: `/accept`.🎯
