@@ -62,7 +62,7 @@ group:
           sync.yml
       - source: scripts/githooks/
         dest: scripts/githooks/
-        replace: false
+        replace: true
       - source: scripts/LICENSE/
         dest: scripts/LICENSE/
         replace: false
