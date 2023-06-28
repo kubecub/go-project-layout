@@ -324,8 +324,11 @@ install.ginkgo:
 	@$(GO) install github.com/onsi/ginkgo/ginkgo@v1.16.2
 
 .PHONY: install.go-gitlint
+# wget -P _output/tools/ https://openim-1306374445.cos.ap-guangzhou.myqcloud.com/openim/tools/go-gitlint
+# go install github.com/antham/go-gitlint/cmd/gitlint@latest
 install.go-gitlint:
-	@$(GO) install github.com/marmotedu/go-gitlint/cmd/go-gitlint@latest
+	@wget -q https://openim-1306374445.cos.ap-guangzhou.myqcloud.com/openim/tools/go-gitlint -O ${TOOLS_DIR}/go-gitlint
+	@chmod +x ${TOOLS_DIR}/go-gitlint
 
 .PHONY: install.go-junit-report
 install.go-junit-report:
