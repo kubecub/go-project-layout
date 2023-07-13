@@ -71,9 +71,9 @@ MAKEFLAGS += --no-print-directory
 endif
 
 # The OS must be linux when building docker images
-PLATFORMS ?= linux_amd64 linux_arm64
+# PLATFORMS ?= linux_amd64 linux_arm64
 # The OS can be linux/windows/darwin when building binaries
-# PLATFORMS ?= darwin_amd64 windows_amd64 linux_amd64 linux_arm64
+PLATFORMS ?= linux_s390x linux_mips64 linux_mips64le darwin_amd64 windows_amd64 linux_amd64 linux_arm64 linux_ppc64le
 
 # Set a specific PLATFORM
 ifeq ($(origin PLATFORM), undefined)
@@ -264,6 +264,36 @@ copyright-add: tools.verify.addlicense
 	@$(TOOLS_DIR)/addlicense -y $(shell date +"%Y") -v -c "KubeCub open source community." -f $(LICENSE_TEMPLATE) $(CODE_DIRS)
 	@echo "===========> End the copyright is added..."
 
+## swagger: Generate swagger document.
+.PHONY: swagger
+swagger: tools.verify.swagger
+	@echo "===========> Generating swagger API docs"
+	@$(TOOLS_DIR)/swagger generate spec --scan-models -w $(ROOT_DIR)/cmd/gendocs -o $(ROOT_DIR)/docs/swagger.yaml
+
+## serve-swagger: Serve swagger spec and docs.
+.PHONY: swagger.serve
+serve-swagger: tools.verify.swagger
+	@$(TOOLS_DIR)/swagger serve -F=redoc --no-open --port 36666 $(ROOT_DIR)/docs/swagger.yaml
+
+## release: release the project
+.PHONY: release
+release: release.verify release.ensure-tag
+	@scripts/release.sh
+
+## release.verify: Check if a tool is installed and install it
+.PHONY: release.verify
+release.verify: tools.verify.git-chglog tools.verify.github-release tools.verify.coscmd tools.verify.coscli
+
+## release.tag: release the project
+.PHONY: release.tag
+release.tag: tools.verify.gsemver release.ensure-tag
+	@git push origin `git describe --tags --abbrev=0`
+
+## release.ensure-tag: ensure tag
+.PHONY: release.ensure-tag
+release.ensure-tag: tools.verify.gsemver
+	@scripts/ensure_tag.sh
+
 ## clean: Clean all builds.
 .PHONY: clean
 clean:
@@ -282,7 +312,7 @@ help: Makefile
 
 BUILD_TOOLS ?= go-gitlint golangci-lint goimports addlicense deepcopy-gen conversion-gen ginkgo go-junit-report 
 
-# tools.verify.%: Check if a tool is installed and install it
+## tools.verify.%: Check if a tool is installed and install it
 .PHONY: tools.verify.%
 tools.verify.%:
 	@echo "===========> Verifying $* is installed"
@@ -323,16 +353,19 @@ install.conversion-gen:
 install.ginkgo:
 	@$(GO) install github.com/onsi/ginkgo/ginkgo@v1.16.2
 
+# git hook
 .PHONY: install.go-gitlint
-# wget -P _output/tools/ https://openim-1306374445.cos.ap-guangzhou.myqcloud.com/openim/tools/go-gitlint
-# go install github.com/antham/go-gitlint/cmd/gitlint@latest
 install.go-gitlint:
-	@wget -q https://openim-1306374445.cos.ap-guangzhou.myqcloud.com/openim/tools/go-gitlint -O ${TOOLS_DIR}/go-gitlint
-	@chmod +x ${TOOLS_DIR}/go-gitlint
+	@$(GO) install github.com/llorllale/go-gitlint@latest
 
 .PHONY: install.go-junit-report
 install.go-junit-report:
 	@$(GO) install github.com/jstemmer/go-junit-report@latest
+
+## install.gotests: Install gotests, used to generate go tests
+.PHONY: install.swagger
+install.swagger:
+	@$(GO) install github.com/go-swagger/go-swagger/cmd/swagger@latest
 
 # ==============================================================================
 # Tools that might be used include go gvm, cos
@@ -353,6 +386,11 @@ install.kubeconform:
 install.gsemver:
 	@$(GO) install github.com/arnaud-deprez/gsemver@latest
 
+## install.hugo: Install hugo, used to generate website
+.PHONY: install.hugo
+install.hugo:
+	@$(GO) install github.com/gohugoio/hugo@latest
+
 ## install.git-chglog: Install git-chglog, used to generate changelog
 .PHONY: install.git-chglog
 install.git-chglog:
@@ -363,10 +401,15 @@ install.git-chglog:
 install.github-release:
 	@$(GO) install github.com/github-release/github-release@latest
 
+## install.goreleaser: Install goreleaser, used to release go program
+.PHONY: install.goreleaser
+install.goreleaser:
+	@$(GO) install github.com/goreleaser/goreleaser@latest
+
 ## install.coscli: Install coscli, used to upload files to cos
-# example: ./coscli  cp/sync -r /root/workspaces/kubecub/go-project-layout/ cos://kubecub-1306374445/code/ -e cos.ap-hongkong.myqcloud.com
-# https://cloud.tencent.com/document/product/436/71763
-# kubecub/*
+# example: ./coscli  cp/sync -r /root/workspaces/OpenIMSDK/OpenKF/ cos://OpenIMSDK-1306374445/code/ -e cos.ap-hongkong.myqcloud.com
+# https://cloud.tencent.com/document/product/436/71763 
+# OpenIMSDK/*
 # - code/
 # - docs/
 # - images/
@@ -385,6 +428,19 @@ install.coscmd:
 .PHONY: install.delve
 install.delve:
 	@$(GO) install github.com/go-delve/delve/cmd/dlv@latest
+
+## install.swag: Install swag, used to generate swagger
+# go1.17+
+# go-swagger is more powerful than swag
+# http://localhost:8080/swagger/index.html
+.PHONY: install.swag
+install.swag:
+	@$(GO) install github.com/swaggo/swag/cmd/swag@latest
+
+## install.go-swagger: Install go-swagger, used to generate swagger
+.PHONY: install.go-swagger
+install.go-swagger:
+	@$(GO) install github.com/go-swagger/go-swagger/cmd/swagger@latest
 
 ## install.air: Install air, used to hot reload go program
 .PHONY: install.air
