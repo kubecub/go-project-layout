@@ -4,7 +4,7 @@
     </b>
 </h1>
 <h3 align="center" style="border-bottom: none">
-      ⭐️  Template for a typical module written on Go.  ⭐️ <br>
+      ⭐️  Template for a typical module written on Go  ⭐️ <br>
 <h3>
 
 
