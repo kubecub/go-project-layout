@@ -1,0 +1,15 @@
+name: Check for typos
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Check for typos
+      uses: codespell-project/actions-codespell@master
+      with:
+        check_filenames: true
+        skip: .git,*.png,*.jpg
+        ignore_words_file: .github/workflows/codespell_ignore_words.txt
+        paths: ./CONTRIBUTING.md ./README.md
+

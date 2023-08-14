@@ -1,0 +1,17 @@
+name: Feature Request
+title: 'Sweep: '
+description: Write something like "Write an api endpoint that does "..." in the "..." file"
+labels: sweep
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Details
+      description: More details for Sweep
+      placeholder: The new endpoint should use the ... class from ... file because it contains ... logic
+  - type: textarea
+    id: error_log
+    attributes:
+      label: Error Log
+      description: Please provide the error message or error log if the feature request is related to an existing error
+      placeholder: Paste the error message or log here

@@ -1,0 +1,17 @@
+name: Refactor
+title: 'Sweep: '
+description: Write something like "Modify the ... api endpoint to use ... version and ... framework"
+labels: sweep
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Details
+      description: More details for Sweep
+      placeholder: We are migrating this function to ... version because ...
+  - type: textarea
+    id: error_log
+    attributes:
+      label: Error Log
+      description: Please provide the error message or error log if the refactor request is related to an existing error
+      placeholder: Paste the error message or log here
