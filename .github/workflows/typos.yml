@@ -5,6 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Run typos command
-      run: ./typos ./CONTRIBUTING.md ./README.md
+    - name: Check for typos
+      uses: codespell-project/actions-codespell@master
+      with:
+        check_filenames: true
+        skip: .git,*.png,*.jpg
+        ignore_words_file: .github/workflows/codespell_ignore_words.txt
+        paths: ./CONTRIBUTING.md ./README.md
 
