@@ -9,3 +9,9 @@ body:
       label: Details
       description: More details about the bug
       placeholder: The bug might be in ... file
+  - type: textarea
+    id: error_log
+    attributes:
+      label: Error Log
+      description: Please provide the error message or error log if available
+      placeholder: Paste the error message or log here
