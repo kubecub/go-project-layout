@@ -1,0 +1,36 @@
+package main
+
+import (
+	"fmt"
+	"os"
+)
+
+func main() {
+	for _, filePath := range os.Args[1:] {
+		checkFileForTypos(filePath)
+	}
+}
+
+func checkFileForTypos(filePath string) {
+	file, err := os.Open(filePath)
+	if err != nil {
+		fmt.Printf("Failed to open file %s: %v\n", filePath, err)
+		return
+	}
+	defer file.Close()
+
+	scanner := bufio.NewScanner(file)
+	lineNumber := 1
+	for scanner.Scan() {
+		line := scanner.Text()
+		// TODO: Use a spell-checking library to check the line for typos.
+		// If a typo is found, print a message with the line number and the typo.
+		fmt.Printf("Checking line %d for typos...\n", lineNumber)
+		lineNumber++
+	}
+
+	if err := scanner.Err(); err != nil {
+		fmt.Printf("Failed to read file %s: %v\n", filePath, err)
+	}
+}
+

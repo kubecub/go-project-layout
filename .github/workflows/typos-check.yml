@@ -1,0 +1,14 @@
+name: Check for typos
+
+on: [push, pull_request]
+
+jobs:
+  check_typos:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Check for typos
+      run: ./tools/typos ./CONTRIBUTING.md ./README.md
+      working-directory: ./
+
