@@ -137,12 +137,12 @@ Comment in an issue:
 
 
 ## 🕋 architecture diagram
-```mermaid
+```go
 // architecture diagram
 ```
 
 **MVC Architecture Design:**
-```mermaid
+```go
 // MVC Architecture Design
 ```
 
