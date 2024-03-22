@@ -138,10 +138,12 @@ Comment in an issue:
 
 ## 🕋 architecture diagram
 ```mermaid
+// architecture diagram
 ```
 
 **MVC Architecture Design:**
 ```mermaid
+// MVC Architecture Design
 ```
 
 ## 🤖 File Directory Description
